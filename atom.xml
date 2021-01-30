@@ -6,7 +6,7 @@
   <link href="http://wawyw.github.io/atom.xml" rel="self"/>
   
   <link href="http://wawyw.github.io/"/>
-  <updated>2021-01-29T09:21:08.116Z</updated>
+  <updated>2021-01-30T16:52:41.767Z</updated>
   <id>http://wawyw.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo + Github Pages 搭建个人博客</title>
+    <link href="http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2021-01-30T16:00:00.000Z</published>
+    <updated>2021-01-30T16:52:41.767Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo-Github-Pages-搭建个人博客&quot;&gt;&lt;a href=&quot;#Hexo-Github-Pages-搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;Hexo + Github Pages 搭建个人博客&quot;&gt;&lt;/a&gt;Hexo +</summary>
+        
+      
+    
+    
+    
+    <category term="博客" scheme="http://wawyw.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo Github" scheme="http://wawyw.github.io/tags/Hexo-Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://wawyw.github.io/2021/01/29/hello-world/"/>
-    <id>http://wawyw.github.io/2021/01/29/hello-world/</id>
-    <published>2021-01-29T09:21:08.116Z</published>
-    <updated>2021-01-29T09:21:08.116Z</updated>
+    <link href="http://wawyw.github.io/2021/01/30/hello-world/"/>
+    <id>http://wawyw.github.io/2021/01/30/hello-world/</id>
+    <published>2021-01-29T16:00:00.000Z</published>
+    <updated>2021-01-30T16:43:59.993Z</updated>
     
     
       
@@ -34,6 +59,10 @@
     
     
     
+    <category term="博客" scheme="http://wawyw.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo" scheme="http://wawyw.github.io/tags/Hexo/"/>
     
   </entry>
   
