@@ -6,7 +6,7 @@
   <link href="http://wawyw.github.io/atom.xml" rel="self"/>
   
   <link href="http://wawyw.github.io/"/>
-  <updated>2021-01-31T06:14:38.240Z</updated>
+  <updated>2021-01-31T15:27:16.644Z</updated>
   <id>http://wawyw.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Gulp压缩HTML,CSS,JavaScript文件</title>
+    <link href="http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/"/>
+    <id>http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/</id>
+    <published>2021-01-31T15:00:00.000Z</published>
+    <updated>2021-01-31T15:27:16.644Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;个人博客:&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Tools" scheme="http://wawyw.github.io/categories/Tools/"/>
+    
+    
+    <category term="Gulp" scheme="http://wawyw.github.io/tags/Gulp/"/>
+    
+    <category term="Tools" scheme="http://wawyw.github.io/tags/Tools/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo + Github Pages 搭建个人博客</title>
