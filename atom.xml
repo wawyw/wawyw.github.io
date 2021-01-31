@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wawyw&#39;s Blog</title>
   <icon>http://wawyw.github.io/icon.png</icon>
-  
+  <subtitle>无限可能的世界</subtitle>
   <link href="http://wawyw.github.io/atom.xml" rel="self"/>
   
   <link href="http://wawyw.github.io/"/>
