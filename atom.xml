@@ -6,7 +6,7 @@
   <link href="http://wawyw.github.io/atom.xml" rel="self"/>
   
   <link href="http://wawyw.github.io/"/>
-  <updated>2021-01-31T17:13:28.277Z</updated>
+  <updated>2021-02-01T17:36:18.051Z</updated>
   <id>http://wawyw.github.io/</id>
   
   <author>
@@ -21,10 +21,17 @@
     <link href="http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/"/>
     <id>http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/</id>
     <published>2021-01-31T15:00:00.000Z</published>
-    <updated>2021-01-31T17:13:28.277Z</updated>
+    <updated>2021-02-01T17:36:18.051Z</updated>
     
     
-    <summary type="html">Gulp 是一个自动化构建工具，开发者可以使用它在项目开发过程中自动执行常见任务。当然Gulp能做的远不止这些。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt; </summary>
+        
+      
     
     
     
@@ -42,10 +49,16 @@
     <link href="http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2021-01-30T16:00:00.000Z</published>
-    <updated>2021-02-01T05:32:03.291Z</updated>
+    <updated>2021-02-01T17:35:50.218Z</updated>
     
     
-    <summary type="html">在学过一些前端知识后，一直有搭建博客的想法。近期趁着假期时间，利用 Hexo 和 Github pages 初步搭建好了个人博客，这里就搭建过程进行简单记录。</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在学过一些前端知识后，一直有搭建博客的想法。近期趁着假期时间，利用 Hexo 和 Github pages</summary>
+        
+      
     
     
     
@@ -54,9 +67,9 @@
     
     <category term="Hexo" scheme="http://wawyw.github.io/tags/Hexo/"/>
     
-    <category term="GitHub" scheme="http://wawyw.github.io/tags/GitHub/"/>
-    
     <category term="Blog" scheme="http://wawyw.github.io/tags/Blog/"/>
+    
+    <category term="GitHub" scheme="http://wawyw.github.io/tags/GitHub/"/>
     
   </entry>
   
@@ -65,10 +78,16 @@
     <link href="http://wawyw.github.io/2021/01/30/hello-world/"/>
     <id>http://wawyw.github.io/2021/01/30/hello-world/</id>
     <published>2021-01-29T16:00:00.000Z</published>
-    <updated>2021-01-31T17:09:27.338Z</updated>
+    <updated>2021-02-01T17:34:24.532Z</updated>
     
     
-    <summary type="html">Welcome to Hexo! This is your very first post. Check documentation for more info.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
     
     
     
