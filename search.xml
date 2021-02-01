@@ -90,17 +90,6 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎造访-敬请指教"><a href="#欢迎造访-敬请指教" class="headerlink" title="欢迎造访,敬请指教"></a>欢迎造访,敬请指教</h1><p>安全萌新一只,还在摸索阶段…</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="categories/index.html"/>
       <url>categories/index.html</url>
@@ -112,11 +101,33 @@
     
     
     <entry>
+      <title></title>
+      <link href="manifest.json"/>
+      <url>manifest.json</url>
+      
+        <content type="html"><![CDATA[{"name":"string","short_name":"Junzhou","theme_color":"#49b1f5","background_color":"#49b1f5","display":"standalone","start_url":"/","icons":[{"src":"images/pwaicons/36.png","sizes":"36x36","type":"image/png"},{"src":"images/pwaicons/48.png","sizes":"48x48","type":"image/png"},{"src":"images/pwaicons/72.png","sizes":"72x72","type":"image/png"},{"src":"images/pwaicons/96.png","sizes":"96x96","type":"image/png"},{"src":"images/pwaicons/144.png","sizes":"144x144","type":"image/png"},{"src":"images/pwaicons/192.png","sizes":"192x192","type":"image/png"},{"src":"images/pwaicons/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>标签</title>
       <link href="tags/index.html"/>
       <url>tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于我</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="欢迎造访-敬请指教"><a href="#欢迎造访-敬请指教" class="headerlink" title="欢迎造访,敬请指教"></a>欢迎造访,敬请指教</h1><p>安全萌新一只,还在摸索阶段…</p>]]></content>
       
     </entry>
     
