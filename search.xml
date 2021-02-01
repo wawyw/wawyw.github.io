@@ -112,11 +112,11 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="link/index.html"/>
-      <url>link/index.html</url>
+      <title>关于我</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎造访-敬请指教"><a href="#欢迎造访-敬请指教" class="headerlink" title="欢迎造访,敬请指教"></a>欢迎造访,敬请指教</h1><p>安全萌新一只,还在摸索阶段…</p>]]></content>
       
     </entry>
     
@@ -134,11 +134,11 @@
     
     
     <entry>
-      <title>关于我</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
+      <title>友情链接</title>
+      <link href="link/index.html"/>
+      <url>link/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="欢迎造访-敬请指教"><a href="#欢迎造访-敬请指教" class="headerlink" title="欢迎造访,敬请指教"></a>欢迎造访,敬请指教</h1><p>安全萌新一只,还在摸索阶段…</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
