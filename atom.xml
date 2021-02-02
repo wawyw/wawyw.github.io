@@ -6,7 +6,7 @@
   <link href="http://wawyw.github.io/atom.xml" rel="self"/>
   
   <link href="http://wawyw.github.io/"/>
-  <updated>2021-02-01T17:36:18.051Z</updated>
+  <updated>2021-02-02T11:18:41.521Z</updated>
   <id>http://wawyw.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用Gulp压缩HTML,CSS,JavaScript文件</title>
+    <title>Gulp压缩初体验</title>
     <link href="http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/"/>
     <id>http://wawyw.github.io/2021/01/31/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9HTML,CSS,JavaScript%E6%96%87%E4%BB%B6/</id>
     <published>2021-01-31T15:00:00.000Z</published>
-    <updated>2021-02-01T17:36:18.051Z</updated>
+    <updated>2021-02-02T11:18:41.521Z</updated>
     
     
       
@@ -45,18 +45,18 @@
   </entry>
   
   <entry>
-    <title>Hexo + Github Pages 搭建个人博客</title>
-    <link href="http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://wawyw.github.io/2021/01/31/Hexo%20+%20Github%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <title>个人博客搭建记录 Hexo+Butterfly+Github Page+Coding</title>
+    <link href="http://wawyw.github.io/2021/01/31/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95%20Hexo+Butterfly+Github%20Page+Coding/"/>
+    <id>http://wawyw.github.io/2021/01/31/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95%20Hexo+Butterfly+Github%20Page+Coding/</id>
     <published>2021-01-30T16:00:00.000Z</published>
-    <updated>2021-02-02T05:06:17.064Z</updated>
+    <updated>2021-02-02T09:45:53.235Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;在学过一些前端知识后，一直有搭建博客的想法。近期趁着假期时间，利用 Hexo 和 Github pages</summary>
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
