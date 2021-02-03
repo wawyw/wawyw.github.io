@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wawyw&#39;s Blog</title>
-  <icon>http://wawyw.github.io/icon.png</icon>
+  <icon>https://www.wawyw.top/icon.png</icon>
   <subtitle>无限可能的世界</subtitle>
-  <link href="http://wawyw.github.io/atom.xml" rel="self"/>
+  <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
-  <link href="http://wawyw.github.io/"/>
+  <link href="https://www.wawyw.top/"/>
   <updated>2021-02-03T01:36:32.160Z</updated>
-  <id>http://wawyw.github.io/</id>
+  <id>https://www.wawyw.top/</id>
   
   <author>
     <name>wawyw</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Gulp压缩初体验</title>
-    <link href="http://wawyw.github.io/posts/175.html"/>
-    <id>http://wawyw.github.io/posts/175.html</id>
+    <link href="https://www.wawyw.top/posts/175.html"/>
+    <id>https://www.wawyw.top/posts/175.html</id>
     <published>2021-01-31T15:00:00.000Z</published>
     <updated>2021-02-03T01:36:32.160Z</updated>
     
@@ -35,19 +35,19 @@
     
     
     
-    <category term="Tools" scheme="http://wawyw.github.io/categories/Tools/"/>
+    <category term="Tools" scheme="https://www.wawyw.top/categories/Tools/"/>
     
     
-    <category term="Gulp" scheme="http://wawyw.github.io/tags/Gulp/"/>
+    <category term="Gulp" scheme="https://www.wawyw.top/tags/Gulp/"/>
     
-    <category term="Tools" scheme="http://wawyw.github.io/tags/Tools/"/>
+    <category term="Tools" scheme="https://www.wawyw.top/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>个人博客搭建记录 Hexo+Butterfly+Github Page+Coding</title>
-    <link href="http://wawyw.github.io/posts/50074.html"/>
-    <id>http://wawyw.github.io/posts/50074.html</id>
+    <link href="https://www.wawyw.top/posts/50074.html"/>
+    <id>https://www.wawyw.top/posts/50074.html</id>
     <published>2021-01-30T16:00:00.000Z</published>
     <updated>2021-02-03T01:36:32.164Z</updated>
     
@@ -62,21 +62,21 @@
     
     
     
-    <category term="Blog" scheme="http://wawyw.github.io/categories/Blog/"/>
+    <category term="Blog" scheme="https://www.wawyw.top/categories/Blog/"/>
     
     
-    <category term="Hexo" scheme="http://wawyw.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://www.wawyw.top/tags/Hexo/"/>
     
-    <category term="Blog" scheme="http://wawyw.github.io/tags/Blog/"/>
+    <category term="Blog" scheme="https://www.wawyw.top/tags/Blog/"/>
     
-    <category term="GitHub" scheme="http://wawyw.github.io/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://www.wawyw.top/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://wawyw.github.io/posts/16107.html"/>
-    <id>http://wawyw.github.io/posts/16107.html</id>
+    <link href="https://www.wawyw.top/posts/16107.html"/>
+    <id>https://www.wawyw.top/posts/16107.html</id>
     <published>2021-01-29T16:00:00.000Z</published>
     <updated>2021-02-03T01:36:32.163Z</updated>
     
@@ -91,12 +91,12 @@
     
     
     
-    <category term="Blog" scheme="http://wawyw.github.io/categories/Blog/"/>
+    <category term="Blog" scheme="https://www.wawyw.top/categories/Blog/"/>
     
     
-    <category term="Hexo" scheme="http://wawyw.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://www.wawyw.top/tags/Hexo/"/>
     
-    <category term="Blog" scheme="http://wawyw.github.io/tags/Blog/"/>
+    <category term="Blog" scheme="https://www.wawyw.top/tags/Blog/"/>
     
   </entry>
   
