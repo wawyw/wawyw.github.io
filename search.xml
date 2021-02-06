@@ -90,17 +90,6 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="categories/index.html"/>
-      <url>categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="manifest.json"/>
       <url>manifest.json</url>
@@ -112,11 +101,22 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="categories/index.html"/>
+      <url>categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="about/index.html"/>
       <url>about/index.html</url>
       
-        <content type="html"><![CDATA[<p><img src="https://i.loli.net/2021/02/02/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无…</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="https://i.loli.net/2021/02/02/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无</p>]]></content>
       
     </entry>
     
