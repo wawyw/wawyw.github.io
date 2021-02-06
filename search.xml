@@ -101,17 +101,6 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="tags/index.html"/>
-      <url>tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="about/index.html"/>
       <url>about/index.html</url>
@@ -123,9 +112,20 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="categories/index.html"/>
-      <url>categories/index.html</url>
+      <title>友情链接</title>
+      <link href="link/index.html"/>
+      <url>link/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://cdn.jsdelivr.net/gh/wawyw/file/avatar.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><blockquote><p>如需要交换友链，请留言！</p></blockquote>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="tags/index.html"/>
+      <url>tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -134,11 +134,11 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="link/index.html"/>
-      <url>link/index.html</url>
+      <title>分类</title>
+      <link href="categories/index.html"/>
+      <url>categories/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://cdn.jsdelivr.net/gh/wawyw/file/avatar.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><blockquote><p>如需要交换友链，请留言！</p></blockquote>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
