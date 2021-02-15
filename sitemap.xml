@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wawyw.top/posts/37062.html</loc>
+    
+    <lastmod>2021-02-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/posts/54831.html</loc>
+    
+    <lastmod>2021-02-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/posts/46255.html</loc>
+    
+    <lastmod>2021-02-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/posts/18120.html</loc>
+    
+    <lastmod>2021-02-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wawyw.top/posts/2811.html</loc>
     
     <lastmod>2021-02-15</lastmod>
@@ -88,14 +116,7 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Hexo/</loc>
-    <lastmod>2021-02-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wawyw.top/tags/Blog/</loc>
+    <loc>https://www.wawyw.top/tags/Linux/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -109,7 +130,14 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Linux/</loc>
+    <loc>https://www.wawyw.top/tags/Hexo/</loc>
+    <lastmod>2021-02-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/tags/Blog/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -132,14 +160,14 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Blog/</loc>
+    <loc>https://www.wawyw.top/categories/Linux/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Linux/</loc>
+    <loc>https://www.wawyw.top/categories/Blog/</loc>
     <lastmod>2021-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
