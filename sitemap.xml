@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wawyw.top/posts/20316.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wawyw.top/posts/22595.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wawyw.top/posts/36028.html</loc>
+    
+    <lastmod>2021-02-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wawyw.top/posts/8774.html</loc>
     
     <lastmod>2021-02-19</lastmod>
@@ -123,6 +144,13 @@
 
   
   <url>
+    <loc>https://wawyw.top/tags/Linux/</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wawyw.top/tags/Gulp/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
@@ -131,13 +159,6 @@
   
   <url>
     <loc>https://wawyw.top/tags/Tools/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wawyw.top/tags/Linux/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -181,14 +202,14 @@
 
   
   <url>
-    <loc>https://wawyw.top/categories/Tools/</loc>
+    <loc>https://wawyw.top/categories/Linux/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wawyw.top/categories/Linux/</loc>
+    <loc>https://wawyw.top/categories/Tools/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

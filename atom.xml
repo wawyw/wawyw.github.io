@@ -6,7 +6,7 @@
   <link href="https://wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://wawyw.top/"/>
-  <updated>2021-02-19T14:34:24.929Z</updated>
+  <updated>2021-02-19T15:11:09.173Z</updated>
   <id>https://wawyw.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL函数及提权</title>
+    <link href="https://wawyw.top/posts/22595.html"/>
+    <id>https://wawyw.top/posts/22595.html</id>
+    <published>2021-02-19T14:30:00.000Z</published>
+    <updated>2021-02-19T15:11:09.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在 sql 注入时为了应对各种限制措施，利用数据库自带的一些系统函数经过各种变换之后可以绕过一些 安全设备或者一些基础防御的措施，比如一些字符串转换的函数、截取字符串长度的函数等，&lt;/p&gt;
+&lt;p&gt; 应用的场景包括：通过注入获取数据、变换字符串绕过</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL基础操作学习</title>
     <link href="https://wawyw.top/posts/8774.html"/>
     <id>https://wawyw.top/posts/8774.html</id>
     <published>2021-02-19T14:00:00.000Z</published>
-    <updated>2021-02-19T14:34:24.929Z</updated>
+    <updated>2021-02-19T14:43:43.395Z</updated>
     
     
       
@@ -33,6 +60,57 @@
 &lt;ul&gt;
 &lt;li&gt;数据库 : 用来存储海量数据的仓库 。&lt;/li&gt;
 &lt;li&gt;SQL</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL注入基础</title>
+    <link href="https://wawyw.top/posts/20316.html"/>
+    <id>https://wawyw.top/posts/20316.html</id>
+    <published>2021-02-19T13:50:00.000Z</published>
+    <updated>2021-02-19T15:27:36.978Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;SQL注入就是通过把SQL命令插入到 Web表单提交 或 URL 或</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL默认库及读写文件</title>
+    <link href="https://wawyw.top/posts/36028.html"/>
+    <id>https://wawyw.top/posts/36028.html</id>
+    <published>2021-02-19T13:30:00.000Z</published>
+    <updated>2021-02-19T14:57:54.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;MySQL默认库&quot;&gt;&lt;a href=&quot;#MySQL默认库&quot; class=&quot;headerlink&quot; title=&quot;MySQL默认库&quot;&gt;&lt;/a&gt;MySQL默认库&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
         
       
     
