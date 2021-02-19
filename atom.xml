@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wawyw&#39;s Blog</title>
-  <icon>https://www.wawyw.top/icon.png</icon>
+  <icon>https://wawyw.top/icon.png</icon>
   <subtitle>无限可能的世界</subtitle>
-  <link href="https://www.wawyw.top/atom.xml" rel="self"/>
+  <link href="https://wawyw.top/atom.xml" rel="self"/>
   
-  <link href="https://www.wawyw.top/"/>
-  <updated>2021-02-17T04:35:44.463Z</updated>
-  <id>https://www.wawyw.top/</id>
+  <link href="https://wawyw.top/"/>
+  <updated>2021-02-19T12:27:47.394Z</updated>
+  <id>https://wawyw.top/</id>
   
   <author>
     <name>wawyw</name>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Web环境搭建记录</title>
+    <link href="https://wawyw.top/posts/60533.html"/>
+    <id>https://wawyw.top/posts/60533.html</id>
+    <published>2021-02-19T10:00:00.000Z</published>
+    <updated>2021-02-19T12:27:47.394Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;搭建环境 : LAMP (Linux + Nginx/Apache + MySQL + PHP)&lt;/p&gt;
+&lt;p&gt;即把</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="Web安全" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux C编程实战之线程控制学习记录</title>
-    <link href="https://www.wawyw.top/posts/37062.html"/>
-    <id>https://www.wawyw.top/posts/37062.html</id>
+    <link href="https://wawyw.top/posts/37062.html"/>
+    <id>https://wawyw.top/posts/37062.html</id>
     <published>2021-02-15T00:40:00.000Z</published>
-    <updated>2021-02-17T04:35:44.463Z</updated>
+    <updated>2021-02-19T12:12:31.202Z</updated>
     
     
       
@@ -34,19 +61,19 @@
     
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux C编程实战之进程控制学习记录</title>
-    <link href="https://www.wawyw.top/posts/54831.html"/>
-    <id>https://www.wawyw.top/posts/54831.html</id>
+    <link href="https://wawyw.top/posts/54831.html"/>
+    <id>https://wawyw.top/posts/54831.html</id>
     <published>2021-02-15T00:30:00.000Z</published>
-    <updated>2021-02-17T04:38:35.978Z</updated>
+    <updated>2021-02-19T12:05:04.029Z</updated>
     
     
       
@@ -59,19 +86,19 @@
     
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux C编程实战之文件操作学习记录</title>
-    <link href="https://www.wawyw.top/posts/46255.html"/>
-    <id>https://www.wawyw.top/posts/46255.html</id>
+    <link href="https://wawyw.top/posts/46255.html"/>
+    <id>https://wawyw.top/posts/46255.html</id>
     <published>2021-02-15T00:20:00.000Z</published>
-    <updated>2021-02-17T04:37:33.997Z</updated>
+    <updated>2021-02-19T12:11:24.830Z</updated>
     
     
       
@@ -85,19 +112,19 @@
     
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux之常用命令</title>
-    <link href="https://www.wawyw.top/posts/18120.html"/>
-    <id>https://www.wawyw.top/posts/18120.html</id>
+    <link href="https://wawyw.top/posts/18120.html"/>
+    <id>https://wawyw.top/posts/18120.html</id>
     <published>2021-02-15T00:10:00.000Z</published>
-    <updated>2021-02-17T04:34:52.622Z</updated>
+    <updated>2021-02-19T12:13:42.041Z</updated>
     
     
       
@@ -111,19 +138,19 @@
     
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu20.04安装记录</title>
-    <link href="https://www.wawyw.top/posts/2811.html"/>
-    <id>https://www.wawyw.top/posts/2811.html</id>
+    <link href="https://wawyw.top/posts/2811.html"/>
+    <id>https://wawyw.top/posts/2811.html</id>
     <published>2021-02-15T00:00:00.000Z</published>
-    <updated>2021-02-15T01:05:27.392Z</updated>
+    <updated>2021-02-19T12:25:35.385Z</updated>
     
     
       
@@ -136,21 +163,21 @@
     
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/categories/Linux/"/>
     
     
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
+    <category term="Linux" scheme="https://wawyw.top/tags/Linux/"/>
     
-    <category term="Ubuntu" scheme="https://www.wawyw.top/tags/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://wawyw.top/tags/Ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>Gulp压缩初体验</title>
-    <link href="https://www.wawyw.top/posts/175.html"/>
-    <id>https://www.wawyw.top/posts/175.html</id>
+    <link href="https://wawyw.top/posts/175.html"/>
+    <id>https://wawyw.top/posts/175.html</id>
     <published>2021-01-31T15:00:00.000Z</published>
-    <updated>2021-02-06T16:08:33.647Z</updated>
+    <updated>2021-02-19T12:02:56.854Z</updated>
     
     
       
@@ -164,21 +191,21 @@
     
     
     
-    <category term="Tools" scheme="https://www.wawyw.top/categories/Tools/"/>
+    <category term="Tools" scheme="https://wawyw.top/categories/Tools/"/>
     
     
-    <category term="Gulp" scheme="https://www.wawyw.top/tags/Gulp/"/>
+    <category term="Gulp" scheme="https://wawyw.top/tags/Gulp/"/>
     
-    <category term="Tools" scheme="https://www.wawyw.top/tags/Tools/"/>
+    <category term="Tools" scheme="https://wawyw.top/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>个人博客搭建记录 Hexo+Butterfly+Github Page+Coding</title>
-    <link href="https://www.wawyw.top/posts/50074.html"/>
-    <id>https://www.wawyw.top/posts/50074.html</id>
+    <link href="https://wawyw.top/posts/50074.html"/>
+    <id>https://wawyw.top/posts/50074.html</id>
     <published>2021-01-30T16:00:00.000Z</published>
-    <updated>2021-02-09T04:29:56.595Z</updated>
+    <updated>2021-02-19T13:03:26.510Z</updated>
     
     
       
@@ -191,23 +218,23 @@
     
     
     
-    <category term="Blog" scheme="https://www.wawyw.top/categories/Blog/"/>
+    <category term="Blog" scheme="https://wawyw.top/categories/Blog/"/>
     
     
-    <category term="Hexo" scheme="https://www.wawyw.top/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://wawyw.top/tags/Hexo/"/>
     
-    <category term="Blog" scheme="https://www.wawyw.top/tags/Blog/"/>
+    <category term="Blog" scheme="https://wawyw.top/tags/Blog/"/>
     
-    <category term="GitHub" scheme="https://www.wawyw.top/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://wawyw.top/tags/GitHub/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://www.wawyw.top/posts/16107.html"/>
-    <id>https://www.wawyw.top/posts/16107.html</id>
+    <link href="https://wawyw.top/posts/16107.html"/>
+    <id>https://wawyw.top/posts/16107.html</id>
     <published>2021-01-29T16:00:00.000Z</published>
-    <updated>2021-02-03T01:36:32.163Z</updated>
+    <updated>2021-02-19T11:50:00.244Z</updated>
     
     
       
@@ -220,12 +247,12 @@
     
     
     
-    <category term="Blog" scheme="https://www.wawyw.top/categories/Blog/"/>
+    <category term="Blog" scheme="https://wawyw.top/categories/Blog/"/>
     
     
-    <category term="Hexo" scheme="https://www.wawyw.top/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://wawyw.top/tags/Hexo/"/>
     
-    <category term="Blog" scheme="https://www.wawyw.top/tags/Blog/"/>
+    <category term="Blog" scheme="https://wawyw.top/tags/Blog/"/>
     
   </entry>
   
