@@ -6,7 +6,7 @@
   <link href="https://wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://wawyw.top/"/>
-  <updated>2021-02-19T14:07:50.576Z</updated>
+  <updated>2021-02-19T14:34:24.929Z</updated>
   <id>https://wawyw.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>页面解析流程的学习</title>
+    <title>MySQL基础操作学习</title>
+    <link href="https://wawyw.top/posts/8774.html"/>
+    <id>https://wawyw.top/posts/8774.html</id>
+    <published>2021-02-19T14:00:00.000Z</published>
+    <updated>2021-02-19T14:34:24.929Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;认识数据库&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据库 : 用来存储海量数据的仓库 。&lt;/li&gt;
+&lt;li&gt;SQL</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web页面解析流程的学习</title>
     <link href="https://wawyw.top/posts/671.html"/>
     <id>https://wawyw.top/posts/671.html</id>
     <published>2021-02-19T13:00:00.000Z</published>
-    <updated>2021-02-19T14:07:50.576Z</updated>
+    <updated>2021-02-19T14:33:42.788Z</updated>
     
     
       
@@ -232,7 +261,7 @@
     <link href="https://wawyw.top/posts/50074.html"/>
     <id>https://wawyw.top/posts/50074.html</id>
     <published>2021-01-30T16:00:00.000Z</published>
-    <updated>2021-02-19T13:03:26.510Z</updated>
+    <updated>2021-02-19T14:33:52.287Z</updated>
     
     
       
