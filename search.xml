@@ -392,11 +392,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
+      <title></title>
+      <link href="manifest.json"/>
+      <url>manifest.json</url>
       
-        <content type="html"><![CDATA[<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无。。。</p>]]></content>
+        <content type="html"><![CDATA[{"name":"string","short_name":"Junzhou","theme_color":"#49b1f5","background_color":"#49b1f5","display":"standalone","start_url":"/","icons":[{"src":"images/pwaicons/36.png","sizes":"36x36","type":"image/png"},{"src":"images/pwaicons/48.png","sizes":"48x48","type":"image/png"},{"src":"images/pwaicons/72.png","sizes":"72x72","type":"image/png"},{"src":"images/pwaicons/96.png","sizes":"96x96","type":"image/png"},{"src":"images/pwaicons/144.png","sizes":"144x144","type":"image/png"},{"src":"images/pwaicons/192.png","sizes":"192x192","type":"image/png"},{"src":"images/pwaicons/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
       
     </entry>
     
@@ -414,11 +414,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="manifest.json"/>
-      <url>manifest.json</url>
+      <title>友情链接</title>
+      <link href="link/index.html"/>
+      <url>link/index.html</url>
       
-        <content type="html"><![CDATA[{"name":"string","short_name":"Junzhou","theme_color":"#49b1f5","background_color":"#49b1f5","display":"standalone","start_url":"/","icons":[{"src":"images/pwaicons/36.png","sizes":"36x36","type":"image/png"},{"src":"images/pwaicons/48.png","sizes":"48x48","type":"image/png"},{"src":"images/pwaicons/72.png","sizes":"72x72","type":"image/png"},{"src":"images/pwaicons/96.png","sizes":"96x96","type":"image/png"},{"src":"images/pwaicons/144.png","sizes":"144x144","type":"image/png"},{"src":"images/pwaicons/192.png","sizes":"192x192","type":"image/png"},{"src":"images/pwaicons/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
+        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/avatar.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><blockquote><p>如需要交换友链，请留言！</p></blockquote>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无。。。</p>]]></content>
       
     </entry>
     
@@ -430,17 +441,6 @@
       <url>tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友情链接</title>
-      <link href="link/index.html"/>
-      <url>link/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/avatar.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><blockquote><p>如需要交换友链，请留言！</p></blockquote>]]></content>
       
     </entry>
     
