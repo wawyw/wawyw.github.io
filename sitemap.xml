@@ -144,7 +144,7 @@
 
   <url>
     <loc>https://wawyw.top/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -152,56 +152,56 @@
   
   <url>
     <loc>https://wawyw.top/tags/Gulp/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/Tools/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/Linux/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-02-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wawyw.top/tags/Ubuntu/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/Hexo/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/Blog/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wawyw.top/tags/Ubuntu/</loc>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/tags/GitHub/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -210,28 +210,28 @@
   
   <url>
     <loc>https://wawyw.top/categories/Tools/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/categories/Linux/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://wawyw.top/categories/Blog/</loc>
-    <lastmod>2021-02-25</lastmod>
+    <lastmod>2021-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
