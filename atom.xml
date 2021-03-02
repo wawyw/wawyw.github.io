@@ -6,7 +6,7 @@
   <link href="https://wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://wawyw.top/"/>
-  <updated>2021-02-25T12:17:35.020Z</updated>
+  <updated>2021-03-02T11:54:03.056Z</updated>
   <id>https://wawyw.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么，Nessus又双叒叕安装失败了？</title>
+    <link href="https://wawyw.top/posts/52081.html"/>
+    <id>https://wawyw.top/posts/52081.html</id>
+    <published>2021-03-02T11:50:00.000Z</published>
+    <updated>2021-03-02T11:54:03.056Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Nessus简介&quot;&gt;&lt;a href=&quot;#Nessus简介&quot; class=&quot;headerlink&quot; title=&quot;Nessus简介&quot;&gt;&lt;/a&gt;Nessus简介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Nessus</summary>
+        
+      
+    
+    
+    
+    <category term="Tools" scheme="https://wawyw.top/categories/Tools/"/>
+    
+    
+    <category term="Tools" scheme="https://wawyw.top/tags/Tools/"/>
+    
+    <category term="Nessus" scheme="https://wawyw.top/tags/Nessus/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux C编程实战之网络编程学习记录</title>
