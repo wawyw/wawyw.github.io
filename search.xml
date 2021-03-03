@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Wireshark抓包体验</title>
+      <link href="posts/31686.html"/>
+      <url>posts/31686.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="嗅探器原理"><a href="#嗅探器原理" class="headerlink" title="嗅探器原理"></a>嗅探器原理</h1><p>嗅探技术是网络安全攻防技术中很重要的一种，通过它可以获取网络中的大量信息。与主动扫描相比，嗅探更难以被察觉，能够对网络中的活动进行实时监控。</p><p>网络嗅探器实际上就是网络中的窃听器，其用途就是捕获分析网络中的数据包，帮助网络管理员发现入侵、分析网络问题等等，它是能够进行嗅探的软件或硬件设备。通过嗅探得到二进制的数据包后，对这些数据包进行解析和理解，获得协议字段与传输的数据的过程就是网络协议分析。所以说，网络嗅探与网络协议分析联系紧密。</p><p>对于攻击者来说，通过网络嗅探，进行协议分析，能够窃取内部机密，搜集信息。而对于管理员来说，网络嗅探可以实现网络流量情况的监听，定位网络故障，并且能够为网络入侵检测提供底层的数据来源。</p><p>网络嗅探的关键在于以太网的通信机制和网卡的工作模式。迄今为止，以太网仍然是最普遍的组网方法之一，而以太网的共享特性决定了嗅探能够成功。由于以太网是基于广播方式传送数据，因此网络中所有的数据信号都会被传送到每一个主机节点，这样每一台机器实际上都能接受到数据帧。一个网络接口使用网卡的接收模式有以下几种：</p><ul><li>广播模式（Broadcast Mode）：该模式下的网卡能够接收网络中所有类型为广播报文的数据帧。</li><li>组播模式（Multicast Mode）：该模式下的网卡能够接受特定的组播数据。</li><li>直接模式（Unicast Mode）：该模式下的网卡在工作时只接收目的地址匹配本机MAC地址的数据帧。</li><li>混杂模式（Promiscuous Mode）：在这种模式下，网卡对数据帧中的目的MAC地址不加任何检查，全部接收。</li></ul><p>因此只要将网卡的工作模式设置为“混杂模式”，网卡将会接受所有传递给他的数据包，从而实现嗅探。嗅探得到结果后，再进行网络协议分析，根据网络协议分析的粒度可以分为三种：针对原始数据包进行分析，层次最低、最细粒度；对网络流（会话）进行分析，通过5元组进行流（会话）；以及网络流高层统计。针对网络报文分析的工具，常用的有集成工具WireShark，网络流重组工具Nstreams、Snort，进行高层统计和摘要分析的Netflow、RRDTools等等。</p><h1 id="Wireshark简介"><a href="#Wireshark简介" class="headerlink" title="Wireshark简介"></a>Wireshark简介</h1><blockquote><p>作为一款高效免费的抓包工具，wireshark可以截取各种网络封包，显示网络封包的详细信息，其最大的优势就是免费、开源以及多平台支持，如今其已是全球最广泛的网络数据包分析软件之一。</p></blockquote><p>Wireshark不可以做什么？</p><p>Wireshark只能查看封包，而不能修改封包的内容，或者发送封包。且对于网络上的异常流量行为，Wireshark不会产生警示或是任何提示。</p><h1 id="Wireshark使用"><a href="#Wireshark使用" class="headerlink" title="Wireshark使用"></a>Wireshark使用</h1><p>Wireshark安装</p><p>前往<a href="https://www.wireshark.org/download.html">Wireshark官网</a>进行下载，下载完成后一路next安装即可。</p><p>（1）打开wireshark，主界面如下图所示。</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304001621502.png" alt="image-20210304001621502"></p><p>（2）利用wireshark开始抓包。选择菜单栏上捕获——&gt;选项，只勾选WLAN的混杂模式，点击开始(也可以直接双击上图的WLAN开始)。</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304001701812.png" alt="image-20210304001701812"></p><p>（3）查看抓包情况（此时wireshark正不停地捕获WLAN下传输的数据包）</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304001722007.png" alt="image-20210304001722007"></p><p>（4）数据包详细信息</p><p>​    各行信息分别为</p><ul><li>Frame：物理层的数据帧概况</li><li>Ethernet II： 数据链路层以太网帧头部信息</li><li>Internet Protocol Version 4: 网络层IP包头部信息</li><li>Transmission Control Protocol：传输层的数据段头部信息</li><li>Hypertext Transfer Protocol: 应用层的信息，此处是HTTP协议</li></ul><p>wireshark与对应的OSI七层模型</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304001821297.png" alt="image-20210304001821297"></p><p>wireshark捕获到的TCP包中的每个字段内容</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304001914848.png" alt="image-20210304001914848"></p><p>（5）wireshark过滤器</p><p>直接使用WireShark捕获包将会得到大量的冗余信息，在几千甚至几万条记录中很难找到自己需要的部分，因而，使用过滤器十分重要。使用WireShark的过滤器有两种方法：</p><p>第一种是在Capture Filter中按照libpcap过滤器语言设置好过滤条件。此外，我们也可以捕获后过滤。先捕获所有的数据包，然后通过设定显示过滤器，只让Wireshark显示我们想要观察的那些类型的数据包。我们使用WireShark过滤器时，输入规则若是正确的，则过滤器输入框的背景为绿色，否则，背景为红色。</p><p>wireshark过滤器表达式的规则：</p><ul><li>协议过滤</li></ul><p>直接在抓包过滤框中直接输入协议名即可。tcp，只显示TCP协议的数据包列表；http，只查看HTTP协议的数据包列表；icmp，只显示ICMP协议的数据包列表</p><ul><li>IP过滤</li></ul><p>ip.src == 192.168.1.102，显示源地址为192.168.1.102的数据包</p><p>ip.dst == 192.168.1.102，显示目标地址为192.168.1.102的数据包</p><p>ip.addr == 192.168.1.102，显示源IP地址或目标IP地址为192.168.1.102的数据包</p><ul><li>端口过滤</li></ul><p>tcp.port == 80，显示tcp协议的源主机或者目的主机端口为80的数据包</p><p>tcp.srcport == 80，显示TCP协议的源主机端口为80的数据包</p><p>tcp.dstport == 80，显示TCP协议的目的主机端口为80的数据包</p><ul><li>Http模式过滤</li></ul><p>http.request.method == GET, 只显示HTTP协议下GET请求的数据包</p><p>http.request.method == POST,只显示HTTP协议下POST请求的数据包</p><ul><li>逻辑运算符</li></ul><p>过滤多个条件组合时，使用and/or。比如获取IP地址为192.168.1.104的ICMP数据包表达式为ip.addr == 192.168.1.104 and icmp</p><h1 id="Wireshark分析TCP三次握手"><a href="#Wireshark分析TCP三次握手" class="headerlink" title="Wireshark分析TCP三次握手"></a>Wireshark分析TCP三次握手</h1><p>TCP三次握手</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304002058972.png" alt="image-20210304002058972"></p><p>抓取TCP包</p><p>启动wireshark，打开浏览器输入<a href="http://www.baidu.com/">www.baidu.com</a>；</p><p>终止抓包，在过滤栏输入http以过滤隐藏其他无关数据包；</p><p>右键选中，点击追踪流——&gt;TCP流，</p><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304002136211.png" alt="image-20210304002136211"></p><p>可以看到这里截获了三个TCP握手数据包，第四个是HTTP数据包，说明HTTP的确是使用TCP建立连接的。</p><blockquote><p>第一次握手，客户端向服务器发送了一个TCP连接请求，标志位SYN = 1，客户端序号Seq(Sequence number)为x = 0，表示客户端请求建立连接</p></blockquote><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304002219815.png" alt="image-20210304002219815"></p><blockquote><p>第二次握手，服务器向客户端发回一个确认包,标志位SYN = 1,ACK = 1。服务器序号seq(y)=0，将确认序号ack(Acknowledgement Number)设置为客户端序号seq(x)加1,即0+1=1。</p></blockquote><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304002240963.png" alt="image-20210304002240963"></p><blockquote><p>第三次握手，客户端收到服务器发来的包后检查确认序号是否正确，即第一次发送的序号seq是否加1（X+1= 0+1=1）以及标志位ACK是否为1。若正确，客户端会再向服务器端发送一个数据包，标志位ACK=1，确认序号=Y+1=0+1=1，并且把服务器发来的序号seq加1发送给对方，发送序号seq为X+1= 0+1=1。服务器收到后确认序号值与ACK=1。至此，一次TCP连接建立，可以传送数据了。</p></blockquote><p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210304002304859.png" alt="image-20210304002304859"></p><h1 id="网络嗅探的防范"><a href="#网络嗅探的防范" class="headerlink" title="网络嗅探的防范"></a>网络嗅探的防范</h1><p>网络嗅探对于安全防护一般的网络来说，操作简单但同时威胁巨大，很多攻击者使用嗅探器进行网络入侵的渗透。故防范网络嗅探显得尤为重要，可以采用以下防御措施：</p><ul><li>安全的拓扑结构。嗅探器只能在当前网络段上进行数据捕获。这就意味着，将网络分段工作进行得越细，嗅探器能够收集的信息就越少。但是，除非是一个ISP（分层服务提供商），或者资源相对不受限制，否则这样的解决方案需要很大的代价。</li><li>会话加密。传统的网络服务程序，HTTP、FTP、SMTP和Telnet等在本质上都是不安全的，因为它们在网络上用明文传送口令和数据，嗅探器非常容易就可以截获这些信息。使用SSH(secure shell)等协议可以使得信息安全地传输。通过使用SSH，可以把所有传输的数据进行加密，这样”中间服务器”这种攻击方式就不可能实现了，而且也能够防止DNS和IP欺骗。</li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] <a href="https://zhuanlan.zhihu.com/p/82498482">Wireshark抓包使用指南</a></p><p>[2] <a href="https://www.cnblogs.com/cocowool/p/wireshark_tcp_http.html">Wireshark使用入门</a></p><p>[3] <a href="https://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html">Wireshark基本介绍和学习TCP三次握手</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tools </tag>
+            
+            <tag> Wireshark </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>什么，Nessus又双叒叕安装失败了？</title>
       <link href="posts/52081.html"/>
       <url>posts/52081.html</url>
@@ -419,11 +446,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
+      <title>标签</title>
+      <link href="tags/index.html"/>
+      <url>tags/index.html</url>
       
-        <content type="html"><![CDATA[<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无。。。</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -452,11 +479,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="tags/index.html"/>
-      <url>tags/index.html</url>
+      <title>关于</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/Srk85XVcw6L9RoA.jpg"></p><p>很抱歉，内容暂无。。。</p>]]></content>
       
     </entry>
     
