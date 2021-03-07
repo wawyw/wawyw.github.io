@@ -6,7 +6,7 @@
   <link href="https://wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://wawyw.top/"/>
-  <updated>2021-03-03T16:37:22.991Z</updated>
+  <updated>2021-03-07T12:03:17.515Z</updated>
   <id>https://wawyw.top/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL注入环境搭建和代码编写</title>
+    <link href="https://wawyw.top/posts/33159.html"/>
+    <id>https://wawyw.top/posts/33159.html</id>
+    <published>2021-03-07T11:50:00.000Z</published>
+    <updated>2021-03-07T12:03:17.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;测试环境：&lt;/p&gt;
+&lt;p&gt;Apache2.4&lt;/p&gt;
+&lt;p&gt;php7.4&lt;/p&gt;
+&lt;p&gt;MySQL8.0.22&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;PHP-MySQL&quot;&gt;&lt;a href=&quot;#PHP-MySQL&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="SQL" scheme="https://wawyw.top/tags/SQL/"/>
+    
+  </entry>
   
   <entry>
     <title>Wireshark抓包体验</title>
@@ -101,7 +134,7 @@
     <link href="https://wawyw.top/posts/22595.html"/>
     <id>https://wawyw.top/posts/22595.html</id>
     <published>2021-02-19T14:30:00.000Z</published>
-    <updated>2021-02-19T15:29:16.326Z</updated>
+    <updated>2021-03-07T12:32:27.537Z</updated>
     
     
       
@@ -121,6 +154,8 @@
     
     <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
     
+    <category term="MySQL" scheme="https://wawyw.top/tags/MySQL/"/>
+    
   </entry>
   
   <entry>
@@ -128,7 +163,7 @@
     <link href="https://wawyw.top/posts/8774.html"/>
     <id>https://wawyw.top/posts/8774.html</id>
     <published>2021-02-19T14:00:00.000Z</published>
-    <updated>2021-02-19T14:43:43.395Z</updated>
+    <updated>2021-03-07T11:48:32.530Z</updated>
     
     
       
@@ -150,6 +185,8 @@
     
     <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
     
+    <category term="MySQL" scheme="https://wawyw.top/tags/MySQL/"/>
+    
   </entry>
   
   <entry>
@@ -157,7 +194,7 @@
     <link href="https://wawyw.top/posts/20316.html"/>
     <id>https://wawyw.top/posts/20316.html</id>
     <published>2021-02-19T13:50:00.000Z</published>
-    <updated>2021-02-19T15:29:16.324Z</updated>
+    <updated>2021-03-07T11:47:23.965Z</updated>
     
     
       
@@ -176,6 +213,8 @@
     
     <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
     
+    <category term="SQL" scheme="https://wawyw.top/tags/SQL/"/>
+    
   </entry>
   
   <entry>
@@ -183,7 +222,7 @@
     <link href="https://wawyw.top/posts/36028.html"/>
     <id>https://wawyw.top/posts/36028.html</id>
     <published>2021-02-19T13:30:00.000Z</published>
-    <updated>2021-02-19T15:29:16.319Z</updated>
+    <updated>2021-03-07T11:48:06.829Z</updated>
     
     
       
@@ -200,6 +239,8 @@
     
     
     <category term="Web安全学习" scheme="https://wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="MySQL" scheme="https://wawyw.top/tags/MySQL/"/>
     
   </entry>
   
