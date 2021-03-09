@@ -1,1 +1,157 @@
-body{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),default}a,img{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),default}.aplayer .aplayer-lrc p{font-size:12px;font-weight:700;line-height:16px!important}.aplayer .aplayer-lrc p.aplayer-lrc-current{font-size:15px}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-66px!important}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0!important}.card-info-avatar:hover{background:url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/H3342af90d24b4d62b9bbfec9688ccc25M.gif)}.layout>div:first-child:not(.recent-posts){background:rgba(255,255,255,.7)}#recent-posts>.recent-post-item{background:rgba(255,255,255,.7)}#aside-content .card-widget{background:rgba(255,255,255,.7)}[data-theme=dark] .layout>div:first-child:not(.recent-posts){background:rgba(255,255,255,.3)}[data-theme=dark] #recent-posts>.recent-post-item{background:rgba(255,255,255,.3)}[data-theme=dark] #aside-content .card-widget{background:rgba(255,255,255,.3)}div#post:hover{-webkit-backdrop-filter:saturate(180%) blur(5px);backdrop-filter:saturate(180%) blur(5px);background-color:rgb(255 255 255 / 70%)}[data-theme=dark] div#post:hover{background-color:rgb(255 255 255 / 30%)}#aside-content .card-widget:hover{-webkit-backdrop-filter:saturate(180%) blur(5px);backdrop-filter:saturate(180%) blur(5px);background-color:rgb(255 255 255 / 70%);border-radius:8px}[data-theme=dark] #aside-content .card-widget:hover{background-color:rgb(255 255 255 / 30%)}div#recent-posts .recent-post-item:hover{-webkit-backdrop-filter:saturate(180%) blur(5px);backdrop-filter:saturate(180%) blur(5px);background-color:rgb(255 255 255 / 70%)}[data-theme=dark] div#recent-posts .recent-post-item:hover{background-color:rgb(255 255 255 / 30%)}div#page:hover{-webkit-backdrop-filter:saturate(180%) blur(5px);backdrop-filter:saturate(180%) blur(5px);background-color:rgb(255 255 255 / 70%)}[data-theme=dark] div#page:hover{background-color:rgb(255 255 255 / 30%)}.el-textarea__inner{min-height:210px!important;height:210px!important}#rightside>div>a,#rightside>div>button{margin-bottom:6px}#rightside>div>a,#rightside>div>button{border-radius:12px}::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background-color:rgba(73,177,245,.2);border-radius:2em}::-webkit-scrollbar-thumb{background-color:#49b1f5;background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);border-radius:2em}::-webkit-scrollbar-corner{background-color:transparent}::-moz-selection{color:#fff;background-color:#49b1f5}
+
+/* 鼠标样式 */
+
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
+}
+
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
+}
+
+
+.aplayer .aplayer-lrc p {
+    font-size:12px;
+    font-weight:400;
+    line-height:16px!important
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current {
+    font-size:15px;
+    color: #ccff99;
+  }
+  .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+    left:-66px!important
+  }
+  .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+    left:0!important
+  }
+
+  /* 彩带 */
+.card-info-avatar:hover {
+  background: url(https://cdn.jsdelivr.net/gh/rigodlee/BLOGCDN/img/H3342af90d24b4d62b9bbfec9688ccc25M.gif);
+}
+
+/*半透明*/
+/*文章*/
+.layout > div:first-child:not(.recent-posts) {
+  background: rgba(255,255,255,.7);
+}
+
+/*主页文章*/
+#recent-posts > .recent-post-item {
+  background: rgba(255,255,255,.7);
+}
+
+/*侧边栏*/
+#aside-content .card-widget {
+  background: rgba(255,255,255,.7);
+}
+/*黑暗模式*/
+[data-theme="dark"] 
+.layout > div:first-child:not(.recent-posts) {
+  background: rgba(255,255,255,.3);
+}
+[data-theme="dark"] 
+#recent-posts > .recent-post-item {
+  background: rgba(255,255,255,.3);
+}
+[data-theme="dark"]     
+#aside-content .card-widget {
+  background: rgba(255,255,255,.3);
+}
+
+/* 毛玻璃效果 */
+div#post:hover{
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgb(255 255 255 / 70%);
+}
+[data-theme="dark"]
+div#post:hover{
+  background-color: rgb(255 255 255 / 30%);
+}
+#aside-content .card-widget:hover{
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgb(255 255 255 / 70%);
+  border-radius: 8px;
+}
+[data-theme="dark"]
+#aside-content .card-widget:hover {
+  background-color: rgb(255 255 255 / 30%);
+}
+div#recent-posts .recent-post-item:hover{
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgb(255 255 255 / 70%);
+}
+[data-theme="dark"]
+div#recent-posts .recent-post-item:hover{
+  background-color: rgb(255 255 255 / 30%);
+}
+div#page:hover{
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgb(255 255 255 / 70%);
+}
+[data-theme="dark"]
+div#page:hover{
+  background-color: rgb(255 255 255 / 30%);
+}
+
+/* Twikoo 评论框高度 */
+.el-textarea__inner {
+  min-height: 210px !important;
+  height: 210px !important;
+}
+
+/* 侧边栏美化 */
+#rightside > div > button, #rightside > div > a{
+  margin-bottom: 6px;
+}
+#rightside>div>a, #rightside>div>button {
+  border-radius: 12px;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+
+#footer {
+  background: #00000000;
+}
+
+
+

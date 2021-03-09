@@ -1,1 +1,211 @@
-"use strict";function _createForOfIteratorHelper(e,t){var n;if("undefined"==typeof Symbol||null==e[Symbol.iterator]){if(Array.isArray(e)||(n=_unsupportedIterableToArray(e))||t&&e&&"number"==typeof e.length){n&&(e=n);var o=0,t=function(){};return{s:t,n:function(){return o>=e.length?{done:!0}:{done:!1,value:e[o++]}},e:function(e){throw e},f:t}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var r,a=!0,i=!1;return{s:function(){n=e[Symbol.iterator]()},n:function(){var e=n.next();return a=e.done,e},e:function(e){i=!0,r=e},f:function(){try{a||null==n.return||n.return()}finally{if(i)throw r}}}}function _unsupportedIterableToArray(e,t){if(e){if("string"==typeof e)return _arrayLikeToArray(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Map"===(n="Object"===n&&e.constructor?e.constructor.name:n)||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?_arrayLikeToArray(e,t):void 0}}function _arrayLikeToArray(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,o=new Array(t);n<t;n++)o[n]=e[n];return o}var loading_pic,requests_url="https://hexo-circle-of-friends-api-six.vercel.app/api",orign_data=[],maxnumber=20,addnumber=10,opentype="_blank",nofollow=!0;document.getElementById("moments_container")&&((loading_pic=document.getElementById("moments_container")).innerHTML='<span id="moments_loading"><i class="fa fa-spinner fa-spin"></i></span>',fetch(requests_url).then(function(e){return e.json()}).then(function(e){data_handle(nofollow,orign_data=e,maxnumber)}));var data_handle=function(e,t,n){for(var o=todaypost(),r=new Date(o),a=0;a<t[1].length;a++)r<new Date(t[1][a][1])&&t[1].splice(a--,1);var i,s=0,l=0,m=t[1].slice(0,n),p=t[1].length,c=t[0].length,d=slice_month(m),f=timezoon(d),u=[],_=_createForOfIteratorHelper(t[1]);try{for(_.s();!(i=_.n()).done;)(a=i.value)[1]===o&&(s+=1),u.push(a[3])}catch(e){_.e(e)}finally{_.f()}var g,m=unique(u).length,h=_createForOfIteratorHelper(t[0]);try{for(h.s();!(g=h.n()).done;)"true"===(a=g.value)[3]&&(l+=1)}catch(e){h.e(e)}finally{h.f()}var b="<h2>统计信息</h2>";b+='<div id="info_user_pool" class="moments-item info_user_pool" style="">',b+='<div class="moments_chart"><span class="moments_post_info_title">当前友链数:</span><span class="moments_post_info_number">'+c+'个</span><br><span class="moments_post_info_title">失败数:</span><span class="moments_post_info_number">'+l+"个</span><br></div>",b+='<div class="moments_chart"><span class="moments_post_info_title">活跃友链数:</span><span class="moments_post_info_number">'+m+'个</span><br><span class="moments_post_info_title">当前库存:</span><span class="moments_post_info_number">'+p+"篇</span><br></div>",b+='<div class="moments_chart"><span class="moments_post_info_title">今日更新:</span><span class="moments_post_info_number">'+s+'篇</span><br><span class="moments_post_info_title">最近更新:</span><span class="moments_post_info_number">'+f+"</span><br></div>",b+="</div>";var y=_createForOfIteratorHelper(d);try{for(y.s();!(v=y.n()).done;){var v=v.value;b+="<h2>"+v[0]+"</h2>";var x=_createForOfIteratorHelper(v[1]);try{for(x.s();!(k=x.n()).done;){var w=k.value,k="",k=e&&"_blank"==opentype?"noopener nofollow":e?"nofollow":"_blank"==opentype?"noopener":"";b+=' <div class="moments-item">',b+=' <a target="'+opentype+'" class="moments-item-img" href="'+w[2]+'" title="'+w[0]+'"rel="'+k+'">',b+='<img onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/Zfour/Butterfly-friend-poor-html/friendcircle/404.png&quot;"',b+=' src="'+w[4]+'"></a>',b+='<div class="moments-item-info"><div class="moments-item-time"><i class="far fa-user"></i>',b+="<span>"+w[3]+"</span>",b+=' <div class="moments_post_time"><i class="far fa-calendar-alt"></i><time datetime="'+w[1]+'" title="'+w[1]+'">'+w[1]+"</time></div>",b+='</div><a target="'.concat(opentype,'" class="moments-item-title" href="').concat(w[2],'" title="').concat(w[0],'"rel="').concat(k,'">').concat(w[0],"</a></div>"),b+="</div>"}}catch(e){x.e(e)}finally{x.f()}}}catch(e){y.e(e)}finally{y.f()}0<t[1].length-n&&(b+='<div style="text-align: center"><button type="button" class="moments_load_button" onclick="load_more_post(orign_data, maxnumber)">加载更多...</button></div>'),b+="<style>.moments-item-info span{padding-left:.3rem;padding-right:.3rem}.moments_post_time time{padding-left:.3rem;cursor:default}.moments_post_info_title{font-weight:700}.moments_post_info_number{float:right}.moments_chart{align-items:flex-start;flex:1;width:100px;height:60px;margin:20px}@media screen and (max-width:500px){.info_user_pool{padding:10px;flex-direction:column;max-height:200px}.moments_chart{flex:0;width:100%;height:160px;margin:0}}.moments-item:before{border:0}@media screen and (min-width:500px){.moments_post_time{float:right}}.moments_load_button{-webkit-transition-duration:.4s;transition-duration:.4s;text-align:center;border:1px solid #ededed;border-radius:.3em;display:inline-block;background:transparent;color:#555;padding:.5em 1.25em}.moments_load_button:hover{color:#3090e4;border-color:#3090e4}.moments-item{position:relative;display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;margin:0 0 1rem .5rem;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;transition:all .2s ease-in-out;box-shadow:rgba(0,0,0,0.07) 0 2px 2px 0,rgba(0,0,0,0.1) 0 1px 5px 0;border-radius:2px}.moments-item-img{overflow:hidden;width:80px;height:80px}.moments-item-img img{max-width:100%;width:100%;height:100%;object-fit:cover}.moments-item-info{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding:0 .8rem}.moments-item-title{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;font-size:1.1em;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;-webkit-line-clamp:1}</style>";n=document.getElementById("moments_container");append_div(n,b)},load_more_post=function(e,t){document.getElementById("moments_container")&&(t+=addnumber,document.getElementById("moments_container").innerHTML="",data_handle(nofollow,e,t))},append_div=function(e,t){if(document.getElementById("moments_container")&&(loading_pic.innerHTML=""),"string"==typeof t){var n=document.createElement("div");n.innerHTML=t;for(var o=document.createDocumentFragment();n.firstChild;)o.appendChild(n.firstChild);e.appendChild(o)}else e.appendChild(t)},unique=function(e){return Array.from(new Set(e))},formatDate=function(e){try{var t=new Date(Date.parse(e.replace(/-/g,"/"))),n=(new Date).getTimezoneOffset()?(new Date).getTimezoneOffset():8,o=60*n*1e3,n=t.getTime(),t=new Date(n-o),n=t.getSeconds().toString(),o=t.getMinutes().toString();return 1===n.length&&(n="0"+n),1===o.length&&(o="0"+o),t.getFullYear().toString()+"/"+(t.getMonth()+1).toString()+"/"+t.getDate().toString()+" "+t.getHours().toString()+":"+o+":"+n}catch(e){return""}},timezoon=function(e){e=e[0][1][0][5];return formatDate(e)},todaypost=function(){var e=new Date,t=e.getFullYear(),n=(e.getMonth()+1).toString(),e=e.getDate().toString();return t+"-"+(n=1===n.length?"0"+n:n)+"-"+(e=1===e.length?"0"+e:e)},slice_month=function(e){var t,n=[],o=[],r=e;for(t in r){r[t].push(t),10!==r[t][1].lenth&&((a=r[t][1].split("-"))[1].length<2&&(a[1]="0"+a[1]),a[2].length<2&&(a[2]="0"+a[2]),r[t][1]=a.join("-"));var a=r[t][1].slice(0,7);-1!==n.indexOf(a)?o[n.length-1][1].push(r[t]):(n.push(a),o.push([a,[r[t]]]))}for(var i=0,s=o;i<s.length;i++){var l=s[i];l.push(l[1][0][6])}return o};
+var requests_url = 'https://hexo-circle-of-friends-api-six.vercel.app/api'; //api地址
+var orign_data = []; //api请求所得到的源数据
+var maxnumber = 20; //页面展示文章数量
+var addnumber = 10; //每次加载增加的篇数
+var opentype = '_blank';  //'_blank'打开新标签,'_self'本窗口打开
+var nofollow = true; //禁止搜索引擎抓取
+
+//处理数据
+
+if(document.getElementById('moments_container')){
+  //添加加载动画
+  var loading_pic = document.getElementById('moments_container');
+  loading_pic.innerHTML = '<span id="moments_loading"><i class="fa fa-spinner fa-spin"></i></span>';
+
+  fetch(requests_url).then(
+      data => data.json()
+  ).then(
+      data => {
+        orign_data = data;
+        data_handle(nofollow,orign_data, maxnumber)
+      }
+  )}
+
+var data_handle = (nofollow,data, maxnumber) => {
+  var today = todaypost();
+  var Datetody = new Date(today);
+  for (var item = 0; item < data[1].length; item++) {
+    var Datedate = new Date(data[1][item][1]);
+    if (Datedate > Datetody) {
+      data[1].splice(item--, 1);
+    }
+  }
+  var today_post = 0;
+  var error = 0;
+  var unique_live_link;
+  var datalist = data[1].slice(0, maxnumber);
+  var listlenth = data[1].length;
+  var user_lenth = data[0].length;
+  var datalist_slice = slice_month(datalist);
+  var last_update_time = timezoon(datalist_slice);
+  var link_list = [];
+  for (var item of data[1]) {
+    if (item[1] === today) {
+      today_post += 1;
+    }
+    link_list.push(item[3]);
+  }
+  var arr = unique(link_list);
+  unique_live_link = arr.length;
+  for (var item of data[0]) {
+    if (item[3] === 'true') {
+      error += 1;
+    }
+  }
+  var html_item = '<h2>统计信息</h2>';
+  html_item += '<div id="info_user_pool" class="moments-item info_user_pool" style="">';
+  html_item += '<div class="moments_chart"><span class="moments_post_info_title">当前友链数:</span><span class="moments_post_info_number">' + user_lenth + '个</span><br><span class="moments_post_info_title">失败数:</span><span class="moments_post_info_number">' + error + '个</span><br></div>';
+  html_item += '<div class="moments_chart"><span class="moments_post_info_title">活跃友链数:</span><span class="moments_post_info_number">' + unique_live_link + '个</span><br><span class="moments_post_info_title">当前库存:</span><span class="moments_post_info_number">' + listlenth + '篇</span><br></div>';
+  html_item += '<div class="moments_chart"><span class="moments_post_info_title">今日更新:</span><span class="moments_post_info_number">' + today_post + '篇</span><br><span class="moments_post_info_title">最近更新:</span><span class="moments_post_info_number">' + last_update_time + '</span><br></div>';
+  html_item += '</div>';
+
+  for (var month_item of datalist_slice) {
+    html_item += '<h2>' + month_item[0] + '</h2>';
+    for (var post_item of month_item[1]) {
+      var rel = '';
+      if (nofollow && opentype == '_blank'){
+        rel = 'noopener nofollow';
+      }else if(nofollow){
+        rel = 'nofollow';
+      }else if(opentype == '_blank'){
+        rel = 'noopener';
+      }else{
+        rel = '';
+      }
+      html_item += ' <div class="moments-item">';
+      html_item += ' <a target="' + opentype + '" class="moments-item-img" href="' + post_item[2] + '" title="' + post_item[0] + '"rel="'+ rel + '">';
+      html_item += '<img onerror="this.onerror=null,this.src=&quot;https://cdn.jsdelivr.net/gh/Zfour/Butterfly-friend-poor-html/friendcircle/404.png&quot;"';
+      html_item += ' src="' + post_item[4] + '"></a>';
+      html_item += '<div class="moments-item-info"><div class="moments-item-time"><i class="far fa-user"></i>';
+      html_item += '<span>' + post_item[3] + '</span>';
+      html_item += ' <div class="moments_post_time"><i class="far fa-calendar-alt"></i>' +
+          '<time datetime="' + post_item[1] + '" title="' + post_item[1] + '">' + post_item[1] + '</time></div>';
+      html_item += `</div><a target="${opentype}" class="moments-item-title" href="${post_item[2]}" title="${post_item[0]}"rel="${rel}">${post_item[0]}</a></div>`;
+      html_item += '</div>';
+
+    }
+  }
+  if (data[1].length - maxnumber > 0) {
+    html_item += '<div style="text-align: center"><button type="button" class="moments_load_button" ' +
+        'onclick="load_more_post(orign_data, maxnumber)">加载更多...</button>' +
+        '</div>'
+  }
+  html_item += '<style>.moments-item-info span{padding-left:.3rem;padding-right:.3rem}.moments_post_time time{padding-left:.3rem;cursor:default}.moments_post_info_title{font-weight:700}.moments_post_info_number{float:right}.moments_chart{align-items:flex-start;flex:1;width:100px;height:60px;margin:20px}@media screen and (max-width:500px){.info_user_pool{padding:10px;flex-direction:column;max-height:200px}.moments_chart{flex:0;width:100%;height:160px;margin:0}}.moments-item:before{border:0}@media screen and (min-width:500px){.moments_post_time{float:right}}.moments_load_button{-webkit-transition-duration:.4s;transition-duration:.4s;text-align:center;border:1px solid #ededed;border-radius:.3em;display:inline-block;background:transparent;color:#555;padding:.5em 1.25em}.moments_load_button:hover{color:#3090e4;border-color:#3090e4}.moments-item{position:relative;display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;margin:0 0 1rem .5rem;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;transition:all .2s ease-in-out;box-shadow:rgba(0,0,0,0.07) 0 2px 2px 0,rgba(0,0,0,0.1) 0 1px 5px 0;border-radius:2px}.moments-item-img{overflow:hidden;width:80px;height:80px}.moments-item-img img{max-width:100%;width:100%;height:100%;object-fit:cover}.moments-item-info{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;padding:0 .8rem}.moments-item-title{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;font-size:1.1em;-webkit-transition:all .3s;-moz-transition:all .3s;-o-transition:all .3s;-ms-transition:all .3s;transition:all .3s;-webkit-line-clamp:1}</style>'
+
+
+
+  var moments_container = document.getElementById('moments_container') ;
+  append_div(moments_container, html_item)
+};
+
+var load_more_post = (orign_data, maxnumber) => {
+  if(document.getElementById('moments_container')){
+    maxnumber = maxnumber + addnumber;
+    document.getElementById('moments_container') .innerHTML = "";
+    data_handle(nofollow,orign_data, maxnumber)}
+};
+
+
+
+//加载更多文章
+//将html放入指定id的div容器
+var append_div = (parent, text) => {
+  if(document.getElementById('moments_container')){
+    loading_pic.innerHTML = ``;
+  };
+  if (typeof text === 'string') {
+    var temp = document.createElement('div');
+    temp.innerHTML = text;
+    // 防止元素太多 进行提速
+    var frag = document.createDocumentFragment();
+    while (temp.firstChild) {
+      frag.appendChild(temp.firstChild);
+    }
+    parent.appendChild(frag);
+  } else {
+    parent.appendChild(text);
+  }
+};
+
+//去重
+var unique = (arr) => {
+  return Array.from(new Set(arr))
+};
+
+//时区优化
+var formatDate = (strDate) => {
+  try {
+    var date = new Date(Date.parse(strDate.replace(/-/g, "/")));
+    var gettimeoffset;
+    if (new Date().getTimezoneOffset()) {
+      gettimeoffset = new Date().getTimezoneOffset();
+    } else {
+      gettimeoffset = 8;
+    }
+    var timeoffset = gettimeoffset * 60 * 1000;
+    var len = date.getTime();
+    var date2 = new Date(len - timeoffset);
+    var sec = date2.getSeconds().toString();
+    var min = date2.getMinutes().toString();
+    if (sec.length === 1) {
+      sec = "0" + sec;
+    }
+    if (min.length === 1) {
+      min = "0" + min;
+    }
+    return date2.getFullYear().toString() + "/" + (date2.getMonth() + 1).toString() + "/" + date2.getDate().toString() + " " + date2.getHours().toString() + ":" + min + ":" + sec
+  } catch (e) {
+    return ""
+  }
+};
+
+var timezoon = (datalist_slice) => {
+  var time = datalist_slice[0][1][0][5];
+  return formatDate(time)
+};
+
+//今日时间
+var todaypost = () => {
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = (date.getMonth() + 1).toString();
+  var day = (date.getDate()).toString();
+  if (month.length === 1) {
+    month = "0" + month;
+  }
+  if (day.length === 1) {
+    day = "0" + day;
+  }
+  return year + "-" + month + "-" + day
+};
+
+//月份切片
+var slice_month = (data) => {
+  var monthlist = [];
+  var datalist = [];
+  var data_slice = data;
+  for (var item in data_slice) {
+    data_slice[item].push(item);
+    if (data_slice[item][1].lenth !== 10) {
+      var list = data_slice[item][1].split('-');
+      if (list[1].length < 2) {
+        list[1] = "0" + list[1]
+      }
+      if (list[2].length < 2) {
+        list[2] = "0" + list[2]
+      }
+      data_slice[item][1] = list.join('-')
+    }
+    var month = data_slice[item][1].slice(0, 7);
+    if (monthlist.indexOf(month) !== -1) {
+      datalist[monthlist.length - 1][1].push(data_slice[item])
+    } else {
+      monthlist.push(month);
+      datalist.push([month, [data_slice[item]]])
+    }
+  }
+  for (var mounthgroup of datalist) {
+    mounthgroup.push(mounthgroup[1][0][6]);
+  }
+  return datalist
+};
