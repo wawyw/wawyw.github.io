@@ -186,6 +186,13 @@
 
   
   <url>
+    <loc>https://www.wawyw.top/tags/Linux/</loc>
+    <lastmod>2021-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.wawyw.top/tags/Gulp/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
@@ -194,13 +201,6 @@
   
   <url>
     <loc>https://www.wawyw.top/tags/Tools/</loc>
-    <lastmod>2021-03-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wawyw.top/tags/Linux/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -222,6 +222,13 @@
   
   <url>
     <loc>https://www.wawyw.top/tags/SQL/</loc>
+    <lastmod>2021-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/tags/Ubuntu/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -256,13 +263,6 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Ubuntu/</loc>
-    <lastmod>2021-03-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wawyw.top/tags/GitHub/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
@@ -272,14 +272,14 @@
 
   
   <url>
-    <loc>https://www.wawyw.top/categories/Tools/</loc>
+    <loc>https://www.wawyw.top/categories/Linux/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Linux/</loc>
+    <loc>https://www.wawyw.top/categories/Tools/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
