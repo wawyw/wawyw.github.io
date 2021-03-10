@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.wawyw.top/collect/index.html</loc>
+    <loc>https://www.wawyw.top/posts/50074.html</loc>
     
     <lastmod>2021-03-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/about/index.html</loc>
+    <loc>https://www.wawyw.top/readme/index.html</loc>
     
     <lastmod>2021-03-10</lastmod>
     
@@ -18,14 +18,21 @@
   <url>
     <loc>https://www.wawyw.top/link/index.html</loc>
     
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/posts/50074.html</loc>
+    <loc>https://www.wawyw.top/speak/index.html</loc>
     
-    <lastmod>2021-03-09</lastmod>
+    <lastmod>2021-03-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/law/index.html</loc>
+    
+    <lastmod>2021-03-10</lastmod>
     
   </url>
   
@@ -186,13 +193,6 @@
 
   
   <url>
-    <loc>https://www.wawyw.top/tags/Linux/</loc>
-    <lastmod>2021-03-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.wawyw.top/tags/Gulp/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
@@ -201,6 +201,13 @@
   
   <url>
     <loc>https://www.wawyw.top/tags/Tools/</loc>
+    <lastmod>2021-03-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/tags/Linux/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -272,14 +279,14 @@
 
   
   <url>
-    <loc>https://www.wawyw.top/categories/Linux/</loc>
+    <loc>https://www.wawyw.top/categories/Tools/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Tools/</loc>
+    <loc>https://www.wawyw.top/categories/Linux/</loc>
     <lastmod>2021-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
