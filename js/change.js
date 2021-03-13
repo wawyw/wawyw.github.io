@@ -47,4 +47,3 @@ WIDGET = {
         "key": "8YIQcU1aJ7"
     }
   }
-

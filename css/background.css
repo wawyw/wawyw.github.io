@@ -388,4 +388,14 @@ div.timenode:hover .meta:after {
   content: "\e610";
 }
 
+#footer-wrap a {
+  color: #41ffdc;
+}
+
+#footer-wrap img {
+  margin-top: 18px;
+}
+#footer-wrap p {
+  margin-top: -3px;
+}
 
