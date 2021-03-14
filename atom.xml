@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-03-08T09:17:22.554Z</updated>
+  <updated>2021-03-14T07:05:07.791Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬虫第一课</title>
+    <link href="https://www.wawyw.top/posts/12051.html"/>
+    <id>https://www.wawyw.top/posts/12051.html</id>
+    <published>2021-03-14T06:00:00.000Z</published>
+    <updated>2021-03-14T07:05:07.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这里使用requests模块和BeautifulSoup模块&lt;/p&gt;
+&lt;p&gt;爬取内容为：豆瓣top250电影的名字、简介、评分及评分人数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;查找信息&quot;&gt;&lt;a href=&quot;#查找信息&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://www.wawyw.top/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://www.wawyw.top/tags/Python/"/>
+    
+    <category term="爬虫" scheme="https://www.wawyw.top/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL注入环境搭建和代码编写</title>
