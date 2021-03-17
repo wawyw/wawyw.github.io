@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-03-14T07:05:07.791Z</updated>
+  <updated>2021-03-17T16:35:19.159Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>XSS漏洞学习</title>
+    <link href="https://www.wawyw.top/posts/54823.html"/>
+    <id>https://www.wawyw.top/posts/54823.html</id>
+    <published>2021-03-17T15:50:00.000Z</published>
+    <updated>2021-03-17T16:35:19.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;XSS练习靶场&lt;/p&gt;
+&lt;p&gt;在线：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://xss.haozi.me/&quot;&gt;https://xss.haozi.me/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="XSS" scheme="https://www.wawyw.top/tags/XSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬虫第一课</title>
     <link href="https://www.wawyw.top/posts/12051.html"/>
     <id>https://www.wawyw.top/posts/12051.html</id>
     <published>2021-03-14T06:00:00.000Z</published>
-    <updated>2021-03-14T07:05:07.791Z</updated>
+    <updated>2021-03-14T07:06:03.914Z</updated>
     
     
       
