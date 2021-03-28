@@ -235,14 +235,7 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-03-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.wawyw.top/tags/CSRF/</loc>
+    <loc>https://www.wawyw.top/tags/Linux/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -263,7 +256,14 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Linux/</loc>
+    <loc>https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-03-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.wawyw.top/tags/CSRF/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -291,14 +291,14 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/SQL/</loc>
+    <loc>https://www.wawyw.top/tags/Ubuntu/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/tags/Ubuntu/</loc>
+    <loc>https://www.wawyw.top/tags/SQL/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -356,7 +356,7 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://www.wawyw.top/categories/Linux/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -370,7 +370,7 @@
   </url>
   
   <url>
-    <loc>https://www.wawyw.top/categories/Linux/</loc>
+    <loc>https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2021-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
