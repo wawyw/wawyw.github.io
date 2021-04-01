@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-03-28T09:49:39.860Z</updated>
+  <updated>2021-04-01T15:35:19.720Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSRF漏洞学习</title>
+    <link href="https://www.wawyw.top/posts/18466.html"/>
+    <id>https://www.wawyw.top/posts/18466.html</id>
+    <published>2021-04-01T14:50:00.000Z</published>
+    <updated>2021-04-01T15:35:19.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SSRF概念&quot;&gt;&lt;a href=&quot;#SSRF概念&quot; class=&quot;headerlink&quot; title=&quot;SSRF概念&quot;&gt;&lt;/a&gt;SSRF概念&lt;/h1&gt;&lt;p&gt;SSRF（Server-Side Request</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="SSRF" scheme="https://www.wawyw.top/tags/SSRF/"/>
+    
+  </entry>
   
   <entry>
     <title>Arduino试玩体验</title>
@@ -536,33 +563,6 @@
     
     
     <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu20.04安装记录</title>
-    <link href="https://www.wawyw.top/posts/2811.html"/>
-    <id>https://www.wawyw.top/posts/2811.html</id>
-    <published>2021-02-15T00:00:00.000Z</published>
-    <updated>2021-03-08T09:18:35.163Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://www.wawyw.top/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://www.wawyw.top/tags/Linux/"/>
-    
-    <category term="Ubuntu" scheme="https://www.wawyw.top/tags/Ubuntu/"/>
     
   </entry>
   
