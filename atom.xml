@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-04-16T14:50:58.302Z</updated>
+  <updated>2021-04-24T09:48:31.711Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://www.wawyw.top/posts/0.html"/>
-    <id>https://www.wawyw.top/posts/0.html</id>
-    <published>2021-04-15T16:17:46.421Z</published>
-    <updated>2021-04-16T14:50:58.302Z</updated>
+    <title>文件上传漏洞学习</title>
+    <link href="https://www.wawyw.top/posts/13382.html"/>
+    <id>https://www.wawyw.top/posts/13382.html</id>
+    <published>2021-04-24T09:40:00.000Z</published>
+    <updated>2021-04-24T09:48:31.711Z</updated>
     
     
       
@@ -34,6 +34,12 @@
     
     
     
+    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="文件上传" scheme="https://www.wawyw.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   
