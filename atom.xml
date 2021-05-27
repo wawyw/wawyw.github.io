@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-05-17T15:55:45.813Z</updated>
+  <updated>2021-05-27T16:39:34.205Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件包含漏洞学习</title>
+    <link href="https://www.wawyw.top/posts/38386.html"/>
+    <id>https://www.wawyw.top/posts/38386.html</id>
+    <published>2021-05-27T16:00:01.000Z</published>
+    <updated>2021-05-27T16:39:34.205Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="文件包含" scheme="https://www.wawyw.top/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>从CISCN2021初赛习得</title>
@@ -532,32 +559,6 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;WEB 页面解析的总体流程&lt;/p&gt;
 &lt;p&gt;客户端（浏览器）发起页面请求，主机对 地址中的DNS 域名进行解析，找到对应的 IP 地址，请求发送到</summary>
-        
-      
-    
-    
-    
-    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web环境搭建记录</title>
-    <link href="https://www.wawyw.top/posts/60533.html"/>
-    <id>https://www.wawyw.top/posts/60533.html</id>
-    <published>2021-02-19T10:00:00.000Z</published>
-    <updated>2021-03-08T09:19:23.271Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本文部分内容来源于&lt;a</summary>
         
       
     
