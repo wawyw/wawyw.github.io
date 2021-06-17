@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-06-15T16:47:02.081Z</updated>
+  <updated>2021-06-17T16:28:12.660Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从强网杯2021线上赛习得</title>
+    <link href="https://www.wawyw.top/posts/23985.html"/>
+    <id>https://www.wawyw.top/posts/23985.html</id>
+    <published>2021-06-17T15:40:00.000Z</published>
+    <updated>2021-06-17T16:28:12.660Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0x00-前言&quot;&gt;&lt;a href=&quot;#0x00-前言&quot; class=&quot;headerlink&quot; title=&quot;0x00 前言&quot;&gt;&lt;/a&gt;0x00</summary>
+        
+      
+    
+    
+    
+    <category term="ctf" scheme="https://www.wawyw.top/categories/ctf/"/>
+    
+    
+    <category term="ctf" scheme="https://www.wawyw.top/tags/ctf/"/>
+    
+    <category term="qwb" scheme="https://www.wawyw.top/tags/qwb/"/>
+    
+  </entry>
+  
+  <entry>
     <title>反序列化漏洞学习</title>
     <link href="https://www.wawyw.top/posts/46951.html"/>
     <id>https://www.wawyw.top/posts/46951.html</id>
     <published>2021-06-15T15:59:59.000Z</published>
-    <updated>2021-06-15T16:47:02.081Z</updated>
+    <updated>2021-06-17T10:57:14.003Z</updated>
     
     
       
@@ -540,34 +567,6 @@
     <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="MySQL" scheme="https://www.wawyw.top/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL注入基础</title>
-    <link href="https://www.wawyw.top/posts/20316.html"/>
-    <id>https://www.wawyw.top/posts/20316.html</id>
-    <published>2021-02-19T13:50:00.000Z</published>
-    <updated>2021-03-08T09:19:31.397Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;SQL注入就是通过把SQL命令插入到 Web表单提交 或 URL 或</summary>
-        
-      
-    
-    
-    
-    <category term="Web安全学习" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="Web安全学习" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="SQL" scheme="https://www.wawyw.top/tags/SQL/"/>
     
   </entry>
   
