@@ -866,17 +866,6 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="categories/index.html"/>
-      <url>categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>友链</title>
       <link href="link/index.html"/>
       <url>link/index.html</url>
@@ -910,11 +899,11 @@
     
     
     <entry>
-      <title>碎碎念</title>
-      <link href="speak/index.html"/>
-      <url>speak/index.html</url>
+      <title>分类</title>
+      <link href="categories/index.html"/>
+      <url>categories/index.html</url>
       
-        <content type="html"><![CDATA[<p>​<br>​<br>​<br>​        </p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -926,6 +915,17 @@
       <url>fcircle/index.html</url>
       
         <content type="html"><![CDATA[<div id="moments_container" ></div><script src="moments.js"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>碎碎念</title>
+      <link href="speak/index.html"/>
+      <url>speak/index.html</url>
+      
+        <content type="html"><![CDATA[<p>​<br>​<br>​<br>​        </p>]]></content>
       
     </entry>
     
