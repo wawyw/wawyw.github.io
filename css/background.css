@@ -33,21 +33,21 @@ img {
 }
 
 /*半透明*/
-/*文章*/
+/* 文章*/
 .layout > div:first-child:not(.recent-posts) {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.9);
 }
 
-/*主页文章*/
+/* 主页文章*/
 #recent-posts > .recent-post-item {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.8);
 }
 
-/*侧边栏*/
+/* 侧边栏*/
 #aside-content .card-widget {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.8);
 }
-/*黑暗模式*/
+/* 黑暗模式*/
 [data-theme="dark"] 
 .layout > div:first-child:not(.recent-posts) {
   background: rgba(255,255,255,.3);
@@ -59,10 +59,10 @@ img {
 [data-theme="dark"]     
 #aside-content .card-widget {
   background: rgba(255,255,255,.3);
-}
+} */
 
 /* 毛玻璃效果 */
-div#post:hover{
+/* div#post:hover{
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
   background-color: rgb(255 255 255 / 70%);
@@ -84,7 +84,7 @@ div#post:hover{
 div#recent-posts .recent-post-item:hover{
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
-  background-color: rgb(255 255 255 / 70%);
+  background-color: rgb(255 255 255 / 90%);
 }
 [data-theme="dark"]
 div#recent-posts .recent-post-item:hover{
@@ -98,7 +98,7 @@ div#page:hover{
 [data-theme="dark"]
 div#page:hover{
   background-color: rgb(255 255 255 / 30%);
-}
+} */
 
 /* Twikoo 评论框高度 */
 .el-textarea__inner {
