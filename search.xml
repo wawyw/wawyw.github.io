@@ -1185,11 +1185,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
+      <title>统计</title>
+      <link href="charts/index.html"/>
+      <url>charts/index.html</url>
       
-        <content type="html"><![CDATA[<div class='tip success'><p>欢迎来到我的博客，这是一个记录学习的地方，像我这样的废物需要多记✍<p></div><div class='tip info'><p>小站的大部分美化、魔改来自（白嫖）于大佬们的博客，感谢分享！🎨<p></div><div class='tip warning'><p>博客中的部分文字、图片来源于网络，如有侵权，请联系删除。🚫<p></div><div class="tip ffa font5 fas fa-cogs"><p><del>永远相信美好的事情即将发生！</del>偶尔搬砖，日常摸鱼ing...🐟</p><p></p></div><h1>个人简介</h1><div class="checkbox cyan">  <input type="radio" />  <p>来自江西，混迹陕西</p></div><div class="checkbox blue">  <input type="radio" />  <p>XUPT在读，真打工人</p></div><div class="checkbox yellow">  <input type="radio" />  <p>联系方式：UVE6MjE5NzMzMTU0MA==</p></div><h1>2021のflag</h1><div class="checkbox green checked">  <input type="checkbox" checked />  <p>按时碎觉，狗命要紧</p></div><div class="checkbox blue checked">  <input type="checkbox" checked />  <p>坚持锻炼，坚持更博</p></div><div class="checkbox yellow checked">  <input type="checkbox" checked />  <p>好好做个CTF签到题选手</p></div><div class="checkbox red checked">  <input type="checkbox" checked />  <p>不做积极废人</p></div><div class="checkbox cyan checked">  <input type="checkbox" checked />  <p>做比昨天更厉害的自己</p></div><div class="timeline"><p class='p h2'>小站破事</p><div class="timenode"><div class="meta"><p><p>2021-07-22</p></p></div><div class="body"><p>更改小站页面的透明度</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-12</p></p></div><div class="body"><p>🎉🎉🎉可喜可贺，小站破壳百天！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-11</p></p></div><div class="body"><ol><li>小站被百度收录（Google早收录了）</li><li>增加Pixiv日榜Top50</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-05-08</p></p></div><div class="body"><p>使用又拍云CDN一天，不知是何原因致使小站无法访问（貌似证书出现问题），无奈换回腾讯云，并买了一年的流量包（12）</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-07</p></p></div><div class="body"><p>换用 <a href="https://www.upyun.com/">又拍云</a> 为小站提供CDN加速。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-26</p></p></div><div class="body"><ol><li>增加 Hexo Magnet</li><li>增加 Butterfly Article Double Row</li><li>增加 Hexo History Calendar</li></ol><p><b style="color:purple">冰老师太厉害啦，插件包一键安装即可食用。</b></p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-24</p></p></div><div class="body"><ol><li>修改了部分位置的字体。</li><li>更换了全局配色。</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-11</p></p></div><div class="body"><ol><li>小站认真学习了<a href="https://www.wawyw.top/law/">网络安全法</a>，保证以后健康、科学上网！</li><li>去除看板娘、樱花飘落、随机背景等效果。</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-10</p></p></div><div class="body"><ol><li>增加<a href="https://www.wawyw.top/speak/">碎碎念</a>页面，Powered By <a href="https://artitalk.js.org/">Artitalk</a></li><li>在顶部添加天气插件，参考于<a href="https://cnhuazhu.gitee.io/2021/02/24/Hexo%E9%AD%94%E6%94%B9/Hexo%E5%9C%A8%E9%A1%B6%E9%83%A8%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%83%A8%E4%BB%B6/">Hexo在顶部增加天气小部件</a></li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-09</p></p></div><div class="body"><p><a href="https://www.wawyw.top/README/">README</a>页面（此页面）终于更新。外挂标签好用，真的好用。参考于<a href="https://www.antmoe.com/posts/3b43914f/index.html">小康的 butterfly 主题使用文档</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-08</p></p></div><div class="body"><p>启用<a href="https://zfe.space/">冰老师</a>的<a href="https://github.com/Zfour/hexo-circle-of-friends">友链朋友圈</a>和<a href="https://github.com/Zfour/hexo-github-calendar">hexo-github-calendar</a>项目，效果很棒，感谢冰老师的指导！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-08</p></p></div><div class="body"><p>使用 <a href="https://cloud.tencent.com/product/cdn/">腾讯云</a> 为小站提供CDN加速。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-06</p></p></div><div class="body"><p>小站托管于<a href="https://coding.net/">Coding</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-05</p></p></div><div class="body"><p>域名备案审核通过，<a href="https://beian.miit.gov.cn/">赣ICP备2021001120号</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-02</p></p></div><div class="body"><p>SSL证书审核通过，再见<code>http</code>，欢迎<code>https</code> ！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-01</p></p></div><div class="body"><ol><li><a href="https://www.wawyw.top/">小站正式</a>上线！本站采用<a href="https://hexo.io/">Hexo</a>框架，<a href="https://butterfly.js.org/">Butterfly</a>主题，托管于<a href="https://github.com/">Github</a>，使用 <a href="https://www.jsdelivr.com/">Jsdelivr</a> 为静态资源提供CDN加速。</li><li><a href="https://wanwang.aliyun.com/">阿里云</a>购买域名 <code>wawyw.top</code></li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-01-31</p></p></div><div class="body"><p>小站即将破壳，反复测试ing…</p></div></div></div>]]></content>
+        <content type="html"><![CDATA[<!-- 文章分类统计图 --><div id="categories-chart" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div><hr><!-- 文章发布时间统计图 --><div id="posts-chart" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div><hr><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div>]]></content>
       
     </entry>
     
@@ -1207,33 +1207,33 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="link/index.html"/>
-      <url>link/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://www.wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://www.wawyw.top/avatar.webp</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><div class='tip info'><p>欢迎交换友链🚀<p></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>统计</title>
-      <link href="charts/index.html"/>
-      <url>charts/index.html</url>
-      
-        <content type="html"><![CDATA[<!-- 文章分类统计图 --><div id="categories-chart" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div><hr><!-- 文章发布时间统计图 --><div id="posts-chart" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div><hr><!-- 文章标签统计图 --><div id="tags-chart" data-length="10" style="background-color: #20232a; border-radius: 8px; height: 300px; padding: 0.5rem;"></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>朋友圈</title>
       <link href="fcircle/index.html"/>
       <url>fcircle/index.html</url>
       
         <content type="html"><![CDATA[<div id="moments_container" ></div><script src="moments.js"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
+      
+        <content type="html"><![CDATA[<div class='tip success'><p>欢迎来到我的博客，这是一个记录学习的地方，像我这样的废物需要多记✍<p></div><div class='tip info'><p>小站的大部分美化、魔改来自（白嫖）于大佬们的博客，感谢分享！🎨<p></div><div class='tip warning'><p>博客中的部分文字、图片来源于网络，如有侵权，请联系删除。🚫<p></div><div class="tip ffa font5 fas fa-cogs"><p><del>永远相信美好的事情即将发生！</del>偶尔搬砖，日常摸鱼ing...🐟</p><p></p></div><h1>个人简介</h1><div class="checkbox cyan">  <input type="radio" />  <p>来自江西，混迹陕西</p></div><div class="checkbox blue">  <input type="radio" />  <p>XUPT在读，真打工人</p></div><div class="checkbox yellow">  <input type="radio" />  <p>联系方式：UVE6MjE5NzMzMTU0MA==</p></div><h1>2021のflag</h1><div class="checkbox green checked">  <input type="checkbox" checked />  <p>按时碎觉，狗命要紧</p></div><div class="checkbox blue checked">  <input type="checkbox" checked />  <p>坚持锻炼，坚持更博</p></div><div class="checkbox yellow checked">  <input type="checkbox" checked />  <p>好好做个CTF签到题选手</p></div><div class="checkbox red checked">  <input type="checkbox" checked />  <p>不做积极废人</p></div><div class="checkbox cyan checked">  <input type="checkbox" checked />  <p>做比昨天更厉害的自己</p></div><div class="timeline"><p class='p h2'>小站破事</p><div class="timenode"><div class="meta"><p><p>2021-07-22</p></p></div><div class="body"><p>更改小站页面的透明度</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-12</p></p></div><div class="body"><p>🎉🎉🎉可喜可贺，小站破壳百天！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-11</p></p></div><div class="body"><ol><li>小站被百度收录（Google早收录了）</li><li>增加Pixiv日榜Top50</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-05-08</p></p></div><div class="body"><p>使用又拍云CDN一天，不知是何原因致使小站无法访问（貌似证书出现问题），无奈换回腾讯云，并买了一年的流量包（12）</p></div></div><div class="timenode"><div class="meta"><p><p>2021-05-07</p></p></div><div class="body"><p>换用 <a href="https://www.upyun.com/">又拍云</a> 为小站提供CDN加速。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-26</p></p></div><div class="body"><ol><li>增加 Hexo Magnet</li><li>增加 Butterfly Article Double Row</li><li>增加 Hexo History Calendar</li></ol><p><b style="color:purple">冰老师太厉害啦，插件包一键安装即可食用。</b></p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-24</p></p></div><div class="body"><ol><li>修改了部分位置的字体。</li><li>更换了全局配色。</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-11</p></p></div><div class="body"><ol><li>小站认真学习了<a href="https://www.wawyw.top/law/">网络安全法</a>，保证以后健康、科学上网！</li><li>去除看板娘、樱花飘落、随机背景等效果。</li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-10</p></p></div><div class="body"><ol><li>增加<a href="https://www.wawyw.top/speak/">碎碎念</a>页面，Powered By <a href="https://artitalk.js.org/">Artitalk</a></li><li>在顶部添加天气插件，参考于<a href="https://cnhuazhu.gitee.io/2021/02/24/Hexo%E9%AD%94%E6%94%B9/Hexo%E5%9C%A8%E9%A1%B6%E9%83%A8%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E5%B0%8F%E9%83%A8%E4%BB%B6/">Hexo在顶部增加天气小部件</a></li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-03-09</p></p></div><div class="body"><p><a href="https://www.wawyw.top/README/">README</a>页面（此页面）终于更新。外挂标签好用，真的好用。参考于<a href="https://www.antmoe.com/posts/3b43914f/index.html">小康的 butterfly 主题使用文档</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-03-08</p></p></div><div class="body"><p>启用<a href="https://zfe.space/">冰老师</a>的<a href="https://github.com/Zfour/hexo-circle-of-friends">友链朋友圈</a>和<a href="https://github.com/Zfour/hexo-github-calendar">hexo-github-calendar</a>项目，效果很棒，感谢冰老师的指导！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-08</p></p></div><div class="body"><p>使用 <a href="https://cloud.tencent.com/product/cdn/">腾讯云</a> 为小站提供CDN加速。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-06</p></p></div><div class="body"><p>小站托管于<a href="https://coding.net/">Coding</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-05</p></p></div><div class="body"><p>域名备案审核通过，<a href="https://beian.miit.gov.cn/">赣ICP备2021001120号</a>。</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-02</p></p></div><div class="body"><p>SSL证书审核通过，再见<code>http</code>，欢迎<code>https</code> ！</p></div></div><div class="timenode"><div class="meta"><p><p>2021-02-01</p></p></div><div class="body"><ol><li><a href="https://www.wawyw.top/">小站正式</a>上线！本站采用<a href="https://hexo.io/">Hexo</a>框架，<a href="https://butterfly.js.org/">Butterfly</a>主题，托管于<a href="https://github.com/">Github</a>，使用 <a href="https://www.jsdelivr.com/">Jsdelivr</a> 为静态资源提供CDN加速。</li><li><a href="https://wanwang.aliyun.com/">阿里云</a>购买域名 <code>wawyw.top</code></li></ol></div></div><div class="timenode"><div class="meta"><p><p>2021-01-31</p></p></div><div class="body"><p>小站即将破壳，反复测试ing…</p></div></div></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>友链</title>
+      <link href="link/index.html"/>
+      <url>link/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="我的Blog信息"><a href="#我的Blog信息" class="headerlink" title="我的Blog信息"></a>我的Blog信息</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">wawyw</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://www.wawyw.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://www.wawyw.top/avatar.webp</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">活在当下</span> <span class="string">顺势而为</span></span><br></pre></td></tr></table></figure><div class='tip info'><p>欢迎交换友链🚀<p></div>]]></content>
       
     </entry>
     
