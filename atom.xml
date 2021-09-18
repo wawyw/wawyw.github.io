@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-09-13T16:18:15.447Z</updated>
+  <updated>2021-09-17T11:34:26.821Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UEditor.net版本任意文件上传到getshell</title>
+    <link href="https://www.wawyw.top/posts/53639.html"/>
+    <id>https://www.wawyw.top/posts/53639.html</id>
+    <published>2021-09-17T00:30:31.000Z</published>
+    <updated>2021-09-17T11:34:26.821Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;漏洞介绍&quot;&gt;&lt;a href=&quot;#漏洞介绍&quot; class=&quot;headerlink&quot; title=&quot;漏洞介绍&quot;&gt;&lt;/a&gt;漏洞介绍&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://www.wawyw.top/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>常用命令</title>
@@ -44,7 +67,7 @@
     <link href="https://www.wawyw.top/posts/3948.html"/>
     <id>https://www.wawyw.top/posts/3948.html</id>
     <published>2021-09-13T00:30:31.000Z</published>
-    <updated>2021-09-13T16:08:16.076Z</updated>
+    <updated>2021-09-18T12:18:44.794Z</updated>
     
     
       
@@ -518,35 +541,6 @@
     <category term="Web安全" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
     <category term="文件上传" scheme="https://www.wawyw.top/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XXE漏洞学习</title>
-    <link href="https://www.wawyw.top/posts/19226.html"/>
-    <id>https://www.wawyw.top/posts/19226.html</id>
-    <published>2021-04-13T15:40:00.000Z</published>
-    <updated>2021-09-06T14:56:06.782Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;XXE简介&quot;&gt;&lt;a href=&quot;#XXE简介&quot; class=&quot;headerlink&quot; title=&quot;XXE简介&quot;&gt;&lt;/a&gt;XXE简介&lt;/h1&gt;&lt;p&gt;XXE （XML EXternal</summary>
-        
-      
-    
-    
-    
-    <category term="Web安全" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8/"/>
-    
-    <category term="XXE" scheme="https://www.wawyw.top/categories/Web%E5%AE%89%E5%85%A8/XXE/"/>
-    
-    
-    <category term="Web安全" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8/"/>
-    
-    <category term="XXE" scheme="https://www.wawyw.top/tags/XXE/"/>
     
   </entry>
   
