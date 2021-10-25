@@ -6,7 +6,7 @@
   <link href="https://www.wawyw.top/atom.xml" rel="self"/>
   
   <link href="https://www.wawyw.top/"/>
-  <updated>2021-10-08T18:32:45.085Z</updated>
+  <updated>2021-10-25T14:44:57.055Z</updated>
   <id>https://www.wawyw.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记bilibili 2021 1024程序员节安全攻防挑战赛</title>
+    <link href="https://www.wawyw.top/posts/47068.html"/>
+    <id>https://www.wawyw.top/posts/47068.html</id>
+    <published>2021-10-25T14:40:00.000Z</published>
+    <updated>2021-10-25T14:44:57.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;赛题地址：&lt;a href=&quot;https://www.bilibili.com/blackboard/20211024.html&quot;&gt;https://www.bilibili.com/blackboard/20211024.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="赛题再现" scheme="https://www.wawyw.top/categories/%E8%B5%9B%E9%A2%98%E5%86%8D%E7%8E%B0/"/>
+    
+    
+    <category term="ctf" scheme="https://www.wawyw.top/tags/ctf/"/>
+    
+  </entry>
+  
+  <entry>
     <title>记一次tp5的艰难getshell</title>
     <link href="https://www.wawyw.top/posts/18066.html"/>
     <id>https://www.wawyw.top/posts/18066.html</id>
     <published>2021-10-08T15:59:59.000Z</published>
-    <updated>2021-10-08T18:32:45.085Z</updated>
+    <updated>2021-10-08T18:33:16.411Z</updated>
     
     
       
@@ -508,33 +534,6 @@
     <category term="Web安全" scheme="https://www.wawyw.top/tags/Web%E5%AE%89%E5%85%A8/"/>
     
     <category term="文件包含" scheme="https://www.wawyw.top/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从CISCN2021初赛习得</title>
-    <link href="https://www.wawyw.top/posts/59734.html"/>
-    <id>https://www.wawyw.top/posts/59734.html</id>
-    <published>2021-05-17T15:40:00.000Z</published>
-    <updated>2021-09-06T15:00:18.752Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Web&quot;&gt;&lt;a href=&quot;#Web&quot; class=&quot;headerlink&quot; title=&quot;Web&quot;&gt;&lt;/a&gt;Web&lt;/h1&gt;&lt;h2 id=&quot;easy-sql&quot;&gt;&lt;a href=&quot;#easy-sql&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="赛题再现" scheme="https://www.wawyw.top/categories/%E8%B5%9B%E9%A2%98%E5%86%8D%E7%8E%B0/"/>
-    
-    
-    <category term="ctf" scheme="https://www.wawyw.top/tags/ctf/"/>
-    
-    <category term="ciscn" scheme="https://www.wawyw.top/tags/ciscn/"/>
     
   </entry>
   
