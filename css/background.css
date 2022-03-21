@@ -1,16 +1,3 @@
-
-/* 鼠标样式 */
-
-body {
-    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur), default;
-}
-
-a,
-img {
-    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur), default;
-}
-
-
 .aplayer .aplayer-lrc p {
     font-size:12px;
     font-weight:400;
@@ -400,8 +387,8 @@ div.timenode:hover .meta:after {
 }
 
 @font-face{
-  font-family:'aqqxs' ;  /* 字体名自定义即可 */
-  src:url('https://cdn.jsdelivr.net/gh/2x-ercha/cdn-for-try/fonts/FXAiQingQiXiangSuo.ttf'); /* 字体文件路径 */
+  font-family:'HYTangMeiRen' ;  /* 字体名自定义即可 */
+  src:url('https://cdn.wawyw.top/font/HYTangMeiRenW.ttf'); /* 字体文件路径 */
   font-display : swap;
 }
 
@@ -420,14 +407,58 @@ a.category-list-link,
 #site-title,
 #aside-content > div.card-widget.card-info.wow.animate__zoomIn > div.card-info-avatar.is-center > div.author-info__name,
 #aside-content > div.card-widget.card-info.wow.animate__zoomIn > div.card-info-avatar.is-center > div.author-info__description {
-  font-family: 'aqqxs', sans-serif;
+  font-family: HYTangMeiRen;
 }
 
 .post-copyright {
-  font-family: 'aqqxs', sans-serif;
+  font-family: HYTangMeiRen;
   font-size: large
 }
 
 #page-header #site-subtitle {
   font-size: 1.62em;
 }
+
+#recent-posts > .recent-post-item {
+  height: 16em;
+}
+
+/* 横向排布子菜单 */
+#nav .menus_items .menus_item .menus_item_child li {
+  display: inline-block;
+}
+/* 圆角隐藏 */
+ul.menus_item_child {
+  overflow: hidden;
+  border-radius: 5px;
+}
+/* 调整空隙，确保不会天下武功唯快不破 */
+#nav .menus_items .menus_item .menus_item_child {
+  margin-top: 0px !important;
+}
+
+/* 导航栏居中 */
+#navFn{
+  flex: 1;
+  text-align: right;
+  }
+  #nav
+    #search-button{
+      display: inline;
+      padding: 0 0 0 0.3rem ;
+      position: relative;
+      padding-bottom: 0.3rem;
+      text-shadow: 0.05rem 0.05rem 0.1rem rgb(0 0 0 / 30%);
+      cursor: pointer;
+  }
+
+
+  svg.icon {
+    width: 1em; height: 1em;
+    /* width和height定义图标的默认宽度和高度*/
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 24px;
+     /* 控制图标大小*/
+ }
